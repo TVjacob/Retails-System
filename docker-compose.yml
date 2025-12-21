@@ -1,33 +1,35 @@
-# version: '3.9'
+version: "3.9"
 
-# services:
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password1
+      POSTGRES_DB: production_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-#   backend:
-#     build: .
-#     container_name: sj-backend
-#     environment:
-#       DATABASE_URL: postgresql://postgres:password1@postgres-db:5432/sjhardware
-#       SECRET_KEY: supersecretkey
-#       FLASK_APP: run.py
-#       FLASK_ENV: production
-#     ports:
-#       - "5000:5000"
-#     restart: unless-stopped
-#     command: >
-#       sh -c "
-#       until pg_isready -h postgres-db -p 5432; do
-#         echo 'Waiting for Postgres...';
-#         sleep 2;
-#       done;
-#       flask db upgrade || true &&
-#       python run.py
-#       "
+  backend:
+    image: 198.38.82.197:5000/hmis-backend:latest   # use the image you just pushed
+    container_name: hmis-backend
+    ports:
+      - "8000:5000"                                   # ← correct mapping
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:password1@my_postgres:5432/production_db
+      SECRET_KEY: supersecretkey
+      FLASK_ENV: production
+    restart: always
 
-#   frontend:
-#     build: ./sjhardware-frontend
-#     container_name: sj-frontend
-#     ports:
-#       - "3000:5173"
-#     depends_on:
-#       - backend
-#     restart: unless-stopped
+volumes:
+  pgdata:
