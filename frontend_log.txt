@@ -1,0 +1,1097 @@
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m864[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m920[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m915[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m927[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m20438[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1198[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m11214[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m7135[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m11:51:30 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Customer.vue, /src/main.css[22m
+[2m11:51:30 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Products.vue, /src/main.css[22m
+[2m12:10:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sidebar.vue, /src/main.css[22m
+[2m12:10:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Supplier.vue, /src/main.css[22m
+[2m12:10:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Expenses.vue, /src/pages/Expenses.vue?vue&type=style&index=0&scoped=aef7218b&lang.css, /src/main.css[22m
+[2m12:50:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Products.vue, /src/pages/Purchases.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/Sales.vue, /src/pages/Expenses.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/SalesList.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/Performance.vue, /src/components/Sidebar.vue, /src/pages/reports/Generalledger.vue, /src/main.css[22m
+[2m12:50:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/router/index.js[22m
+[2m12:50:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/layouts/MainLayout.vue, /src/main.css[22m
+[2m12:50:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sidebar.vue, /src/main.css[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m11456[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1139[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1811[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1676[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1802[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1838[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1710[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m9029[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m7875[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12:05:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.vue, /src/pages/Dashboard.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/Purchases.vue, /src/pages/PurchaseList.vue, /src/pages/Products.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/Expenses.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Performance.vue, /src/pages/SalesList.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Generalledger.vue, /src/components/Sidebar.vue, /src/main.css[22m
+[2m12:21:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.vue, /src/pages/Dashboard.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/Purchases.vue, /src/pages/PurchaseList.vue, /src/pages/Products.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/Expenses.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Performance.vue, /src/pages/SalesList.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Generalledger.vue, /src/components/Sidebar.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m9598[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12:35:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.vue, /src/main.css[22m
+[2m12:35:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Purchases.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8945[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m9077[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m5821[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8682[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m5:15:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Purchases.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8774[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:22:43 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/router/index.js[22m
+[2m10:22:43 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/PurchaseList.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8446[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m7:54:38 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m7:54:38 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m7:54:38 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m7:54:38 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Sales.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Sales.vue[39m:157:22
+[33m  14 |  /* Injection by vite-plugin-vue-inspector End */
+  15 |  import { ref, computed, onMounted } from 'vue'
+  16 |  import debounce from 'lodash.debounce'
+     |                        ^
+  17 |  import api from '../api'
+  18 |  [39m
+[2m7:54:39 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Purchases.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Purchases.vue[39m:164:22
+[33m  16 |  import { ref, computed, onMounted } from 'vue'
+  17 |  import { useRouter } from 'vue-router'
+  18 |  import debounce from 'lodash.debounce'
+     |                        ^
+  19 |  import api from '../api'
+  20 |  [39m
+[2m7:54:39 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/Trialbalance.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/Trialbalance.vue[39m:139:22
+[33m  15 |  import { ref, onMounted, computed } from "vue";
+  16 |  import api from "@/api";
+  17 |  import html2pdf from "html2pdf.js";
+     |                        ^
+  18 |  import * as XLSX from "xlsx";
+  19 |  import AccountTRow from "./AccountTRow.vue";[39m
+[2m7:54:39 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/BalanceSheet.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/BalanceSheet.vue[39m:152:24
+[33m  14 |  import { ref, onMounted } from "vue";
+  15 |    import api from "@/api";
+  16 |    import html2pdf from "html2pdf.js";
+     |                          ^
+  17 |    
+  18 |    [39m
+[2m7:54:39 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8497[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:36:43 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m10:36:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m10:36:44 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Sales.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Sales.vue[39m:157:22
+[33m  14 |  /* Injection by vite-plugin-vue-inspector End */
+  15 |  import { ref, computed, onMounted } from 'vue'
+  16 |  import debounce from 'lodash.debounce'
+     |                        ^
+  17 |  import api from '../api'
+  18 |  [39m
+[2m10:36:44 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Purchases.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Purchases.vue[39m:164:22
+[33m  16 |  import { ref, computed, onMounted } from 'vue'
+  17 |  import { useRouter } from 'vue-router'
+  18 |  import debounce from 'lodash.debounce'
+     |                        ^
+  19 |  import api from '../api'
+  20 |  [39m
+[2m10:36:45 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/Trialbalance.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/Trialbalance.vue[39m:139:22
+[33m  15 |  import { ref, onMounted, computed } from "vue";
+  16 |  import api from "@/api";
+  17 |  import html2pdf from "html2pdf.js";
+     |                        ^
+  18 |  import * as XLSX from "xlsx";
+  19 |  import AccountTRow from "./AccountTRow.vue";[39m
+[2m10:36:45 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/BalanceSheet.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/BalanceSheet.vue[39m:152:24
+[33m  14 |  import { ref, onMounted } from "vue";
+  15 |    import api from "@/api";
+  16 |    import html2pdf from "html2pdf.js";
+     |                          ^
+  17 |    
+  18 |    [39m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m10:37:17 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m10:37:17 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m10:37:18 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m10:37:18 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m10:38:09 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m10:38:09 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m10167[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:40:26 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+[2m10:40:26 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m10:40:27 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Sales.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Sales.vue[39m:157:22
+[33m  14 |  /* Injection by vite-plugin-vue-inspector End */
+  15 |  import { ref, computed, onMounted } from 'vue'
+  16 |  import debounce from 'lodash.debounce'
+     |                        ^
+  17 |  import api from '../api'
+  18 |  [39m
+[2m10:40:27 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "lodash.debounce" from "src/pages/Purchases.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/Purchases.vue[39m:164:22
+[33m  16 |  import { ref, computed, onMounted } from 'vue'
+  17 |  import { useRouter } from 'vue-router'
+  18 |  import debounce from 'lodash.debounce'
+     |                        ^
+  19 |  import api from '../api'
+  20 |  [39m
+[2m10:40:28 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/Trialbalance.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/Trialbalance.vue[39m:139:22
+[33m  15 |  import { ref, onMounted, computed } from "vue";
+  16 |  import api from "@/api";
+  17 |  import html2pdf from "html2pdf.js";
+     |                        ^
+  18 |  import * as XLSX from "xlsx";
+  19 |  import AccountTRow from "./AccountTRow.vue";[39m
+[2m10:40:28 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "html2pdf.js" from "src/pages/reports/BalanceSheet.vue". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/pages/reports/BalanceSheet.vue[39m:152:24
+[33m  14 |  import { ref, onMounted } from "vue";
+  15 |    import api from "@/api";
+  16 |    import html2pdf from "html2pdf.js";
+     |                          ^
+  17 |    
+  18 |    [39m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m11:01:23 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m11:01:23 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m11:01:24 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+[2m11:01:24 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "vuetify/styles" from "src/main.js". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/sjhardware_flask/sjhardware-frontend/src/main.js[39m:8:8
+[33m  6  |  
+  7  |  // 🟣 Vuetify imports
+  8  |  import 'vuetify/styles'
+     |          ^
+  9  |  import { createVuetify } from 'vuetify'
+  10 |  import { aliases, mdi } from 'vuetify/iconsets/mdi'[39m
+      at TransformPluginContext._formatLog (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31527:43)
+      at TransformPluginContext.error (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31524:14)
+      at normalizeUrl (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:29996:18)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30054:32
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:30022:4)
+      at async file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:31325:14)
+      at async loadAndTransform (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:26407:26)
+      at async viteTransformMiddleware (file:///C:/sjhardware_flask/sjhardware-frontend/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:27492:20)
+[2m11:04:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify, vuetify/iconsets/mdi, vuetify/components, vuetify/directives, lodash.debounce, html2pdf.js[32m[39m
+[2m11:04:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m9483[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m2:29:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Purchases.vue, /src/main.css[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1871[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1630[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m892[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m955[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m897[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m967[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m900[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m914[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m906[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m952[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m911[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1002[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m12:28:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Expenses.vue, /src/main.css[22m
+[2m2:32:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SalesList.vue, /src/main.css[22m
+[2m2:37:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Products.vue, /src/main.css[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m899[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m885[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2810[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2367[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2571[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2248[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2213[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2400[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2118[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1954[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m12:58:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Expenses.vue, /src/pages/Expenses.vue?vue&type=style&index=0&scoped=aef7218b&lang.css, /src/main.css[22m
+[2m12:58:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/PurchaseList.vue, /src/pages/PurchaseList.vue?vue&type=style&index=0&scoped=0f3e7a16&lang.css, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2145[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m1:28:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Expenses.vue, /src/pages/Expenses.vue?vue&type=style&index=0&scoped=aef7218b&lang.css, /src/main.css[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2498[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1834[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2845[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2010[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/reports/PurchaseProduct.vue, /src/pages/reports/PurchaseProduct.vue?vue&type=style&index=0&scoped=b8087c46&lang.css, /src/main.css[22m
+[2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/reports/SalesProfit.vue, /src/pages/reports/SalesProfit.vue?vue&type=style&index=0&scoped=de85616c&lang.css, /src/main.css[22m
+[2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SalesList.vue, /src/main.css[22m

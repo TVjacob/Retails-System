@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: sjhardware
+    runtime: python  # Added missing property "runtime"
+    plan: free
+    region: oregon
+    autoDeploy: true
+    healthCheckPath: /api/health
+    envVars:
+      - key: ENV  # Changed to correct structure
+        value: production
+      - key: SECRET_KEY  # Changed to correct structure
+        value: supersecretkey
+
+databases:
+  - name: sjhardware-db
+    databaseName: sjhardware
+    user: sj_user
+    plan: free
+    region: oregon

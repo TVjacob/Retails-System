@@ -1,0 +1,8 @@
+{
+    "LOCAL_DB_URL": "postgresql://postgres:password1@localhost:5432/sjhardware",
+    "DOCKER_DB_URL": "postgresql://postgres:password1@db:5432/sjhardware",
+    "CLOUD_DB_URL": "postgresql://postgres:password1@your-cloud-host:5432/sjhardware",
+    "SECRET_KEY": "supersecretkey",
+    "ENV": "local"
+  }
+  
