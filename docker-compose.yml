@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password1
-      POSTGRES_DB: production_db
+      POSTGRES_DB: retail_db
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: always
@@ -18,15 +18,15 @@ services:
       retries: 5
 
   backend:
-    image: 198.38.82.197:5000/hmis-backend:latest   # use the image you just pushed
-    container_name: hmis-backend
+    image: 198.38.82.197:5000/retail-backend:latest   # use the image you just pushed
+    container_name: retail-backend
     ports:
-      - "8000:5000"                                   # ← correct mapping
+      - "8980:5000"                                   # ← correct mapping
     depends_on:
       postgres-db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://postgres:password1@my_postgres:5432/production_db
+      DATABASE_URL: postgresql://postgres:password1@my_postgres:5432/retail_db
       SECRET_KEY: supersecretkey
       FLASK_ENV: production
     restart: always

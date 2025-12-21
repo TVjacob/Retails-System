@@ -32,7 +32,7 @@ class Config:
         or env.get("CLOUD_DB_URL")              # ← your Render DB string in env.json
         or env.get("DOCKER_DB_URL")             # ← for local docker-compose
         or env.get("LOCAL_DB_URL")              # ← for running locally without Docker
-        or "postgresql://postgres:password1@localhost:5432/sjhardware"
+        or "postgresql://postgres:password1@localhost:5432/retail_db"
     )
 
     # Optional: make sure PostgreSQL driver is used (Render needs this format)
