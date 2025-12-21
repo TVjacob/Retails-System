@@ -17,8 +17,8 @@ import SalesList from '../pages/SalesList.vue';
 // Reports
 // import OutOfStock from '@/pages/reports/OutOfStock.vue';
 // import StockList from '@/pages/reports/StockList.vue';
-import OutOfStock from '@/pages/reports/Outofstock.vue';
-import StockList from '@/pages/reports/Stocklist.vue';
+import OutOfStock from '@/pages/reports/OutOfStock.vue';
+import StockList from '@/pages/reports/StockList.vue';
 import Consumption from '@/pages/reports/ConsumptionList.vue';
 import Performance from '@/pages/reports/Performance.vue';
 import PurchaseReport from '@/pages/reports/PurchaseReport.vue';
