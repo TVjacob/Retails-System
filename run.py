@@ -486,9 +486,9 @@ def seed_chart_of_accounts():
         print(f"❌ Failed to seed accounts: {e}")
 
 
-@app.route("/api/health")
-def health():
-    return {"status": "ok", "db": "connected"}
+# @app.route("/api/health")
+# def health():
+#     return {"status": "ok", "db": "connected"}
 
 def update_inventory_from_purchases():
     """Add product quantities from received purchase orders."""
