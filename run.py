@@ -193,13 +193,13 @@ permissions = [
 ]
 
 
-# Serve Vue frontend in production
-@app.route("/", defaults={"path": ""})
-@app.route("/<path:path>")
-def serve_vue(path):
-    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
-        return send_from_directory(app.static_folder, path)
-    return send_from_directory(app.static_folder, "index.html")
+# Serve Vue frontend in productionx
+# @app.route("/", defaults={"path": ""})
+# @app.route("/<path:path>")
+# def serve_vue(path):
+#     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+#         return send_from_directory(app.static_folder, path)
+#     return send_from_directory(app.static_folder, "index.html")
 
 def seed_permissions():
     """Insert permissions if they don’t already exist and assign all to admin."""
