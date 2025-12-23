@@ -7,26 +7,26 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password1
-      POSTGRES_DB: retail_db
+      POSTGRES_DB: kimsphones   # ← Changed here!
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d kimsphones"]
       interval: 10s
       timeout: 5s
       retries: 5
 
   backend:
-    image: 198.38.82.197:5000/retail-backend:latest   # use the image you just pushed
+    image: 198.38.82.197:5000/retail-backend:latest
     container_name: retail-backend
     ports:
-      - "8980:5000"                                   # ← correct mapping
+      - "8980:5000"
     depends_on:
       postgres-db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://postgres:password1@my_postgres:5432/retail_db
+      DATABASE_URL: postgresql://postgres:password1@my_postgres:5432/kimsphones
       SECRET_KEY: supersecretkey
       FLASK_ENV: production
     restart: always
