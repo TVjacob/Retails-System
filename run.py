@@ -362,7 +362,7 @@ if __name__ == "__main__":
         from app.utils.gl_utils import generate_transaction_number, post_to_ledger
         create_default_piece_unit_for_products()
         repair_inventory()
-        # update_all_accounts()
+        update_all_accounts()
         normalize_account_type_enum_uppercase()
         seed_permissions()
         create_default_admin()
