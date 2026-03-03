@@ -52,3 +52,4 @@ app/__pycache__/*
 app/migrations/*
 app/routes/__pycache__/*
 *.pyc
+env/*
