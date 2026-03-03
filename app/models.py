@@ -2,7 +2,8 @@ from app import db
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 import enum
-from sqlalchemy import Enum
+from sqlalchemy import Enum, CheckConstraint
+
 # ------------------ Mixin for Status ------------------
 class StatusMixin:
     status = db.Column(db.Integer, default=1, nullable=False)  # 1 = Active, 0 = Inactive
@@ -33,16 +34,6 @@ class Category(db.Model, StatusMixin):
     name = db.Column(db.String(50), unique=True, nullable=False)
     description = db.Column(db.String(200))
 
-# class Product(db.Model, StatusMixin):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(100), nullable=False)
-#     sku = db.Column(db.String(50), unique=False, nullable=False)
-#     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
-#     quantity = db.Column(db.Integer, default=0)
-#     price = db.Column(db.Float, default=0)
-#     # created_at = db.Column(db.DateTime, default=datetime.utcnow)
-
-
 class Product(db.Model, StatusMixin):
     __tablename__ = 'product'
 
@@ -50,36 +41,61 @@ class Product(db.Model, StatusMixin):
     name = db.Column(db.String(100), nullable=False)
     sku = db.Column(db.String(50), unique=False, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
-    quantity = db.Column(db.Integer, default=0)
-    price = db.Column(db.Float, default=0)  # base/default retail price
+    quantity = db.Column(db.Float, default=0.0)  # Total stock in base units (float for fractional measurements)
+    price = db.Column(db.Float, default=0.0)  # Base/default retail price per base unit
+    wholesale_price = db.Column(db.Float, default=0.0)  # Base/default wholesale price per base unit
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    # ✅ Relationship to ProductUnit
-    units = db.relationship(
-        "ProductUnit",
-        backref="product",
-        lazy=True,
-        cascade="all, delete-orphan"
-    )
+    # Relationship to Category
+    category = db.relationship('Category', backref='products', lazy=True)
 
+    # Relationship to ProductUnit
+    # units = db.relationship(
+    #     "ProductUnit",
+    #     backref="product",
+    #     lazy=True,
+    #     cascade="all, delete-orphan"
+    # )
 
 
 class ProductUnit(db.Model, StatusMixin):
-    __tablename__ = "product_unit"
+    __tablename__ = 'product_unit'
 
     id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("product.id"), nullable=False)  # ✅ foreign key
-    name = db.Column(db.String(50), nullable=False)          # e.g. "Bottle", "Crate", "Box"
-    quantity = db.Column(db.Integer, default=1)              # Number of items in that unit
-    retail_price = db.Column(db.Float, default=0)
-    whole_price = db.Column(db.Float, default=0)
-    is_returnable = db.Column(db.Boolean, default=False)      # ✅ returnable or not
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+
+    # Name of the unit (Bottle, Dozen, Crate, etc.)
+    unit_name = db.Column(db.String(50), nullable=False)
+
+    # How many base units this represents (e.g., 1 sack = 12 quaters)
+    conversion_quantity = db.Column(db.Integer, default=1, nullable=False)
+
+    # Prices specific to this unit
+    retail_price = db.Column(db.Float, default=0.0)
+    wholesale_price = db.Column(db.Float, default=0.0)
+    cost_price = db.Column(db.Float, default=0.0)
+
+    # Whether the unit is refundable (e.g., crates or bottles that can be returned)
+    is_returnable = db.Column(db.Boolean, default=False)
+
+    # Optional barcode or code unique per unit
+    unit_code = db.Column(db.String(50), unique=False,nullable=True)
+
+    # Relationships
+    product = db.relationship(
+        'Product', 
+        backref=db.backref('units', lazy=True, cascade="all, delete-orphan")
+    )
+
+    # Link back to ReturnableContainers
+    # containers = db.relationship('ReturnableContainer', back_populates='product_unit', lazy=True)
 
     def __repr__(self):
-        return f"<ProductUnit {self.name} | Returnable={self.is_returnable}>"
+        return f"<ProductUnit {self.unit_name} of {self.product.name}>"
 
-
+    def get_total_price(self, quantity):
+        """Calculate total retail value for given quantity."""
+        return self.retail_price * quantity
 
 
 
@@ -102,11 +118,10 @@ class PurchaseOrder(db.Model, StatusMixin):
     transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'))
 
     # Financial fields
-    total_amount = db.Column(db.Float, default=0)    # sum of all items
-    total_paid = db.Column(db.Float, default=0)      # payments made
-    total_balance = db.Column(db.Float, default=0)   # total_amount - total_paid
-    status= db.Column(db.Integer, nullable=False,default=1)
-
+    total_amount = db.Column(db.Float, default=0.0)    # sum of all items
+    total_paid = db.Column(db.Float, default=0.0)      # payments made
+    total_balance = db.Column(db.Float, default=0.0)   # total_amount - total_paid
+    status = db.Column(db.Integer, nullable=False, default=1)
 
     supplier = db.relationship('Supplier', backref='purchase_orders', lazy=True)
     items = db.relationship('PurchaseOrderItem', backref='purchase_order', lazy=True, cascade="all, delete-orphan")
@@ -119,36 +134,27 @@ class PurchaseOrder(db.Model, StatusMixin):
         self.total_amount = sum([item.total_price for item in self.items if item.status == 1])
         self.total_balance = self.total_amount - self.total_paid
 
-
 class PurchaseOrderItem(db.Model, StatusMixin):
     __tablename__ = 'purchase_order_item'
 
     id = db.Column(db.Integer, primary_key=True)
     purchase_order_id = db.Column(db.Integer, db.ForeignKey('purchase_order.id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
-    quantity = db.Column(db.Integer, nullable=False)
-    unit_price = db.Column(db.Float, default=0)
-    total_price = db.Column(db.Float, default=0)  # quantity * unit_price
-    status= db.Column(db.Integer, nullable=False,default=1)
+    unit_id = db.Column(db.Integer, db.ForeignKey('product_unit.id'), nullable=True)  # Link to unit
+    quantity = db.Column(db.Float, nullable=False)  # Quantity in the selected unit (float for fractions)
+    unit_price = db.Column(db.Float, default=0.0)
+    total_price = db.Column(db.Float, default=0.0)  # quantity * unit_price
+    status = db.Column(db.Integer, nullable=False, default=1)
+
     product = db.relationship('Product', backref='purchase_order_items', lazy=True)
+    unit = db.relationship('ProductUnit', backref='purchase_order_items', lazy=True)
 
     def __repr__(self):
         return f"<POItem ProductID={self.product_id} Qty={self.quantity}>"
 
     def calculate_total(self):
         """Update total_price based on quantity and unit_price."""
-        self.total_price = self.quantity * self.unit_price
-
-# class SupplierPayment(db.Model, StatusMixin):
-#     id = db.Column(db.Integer, primary_key=True)
-#     purchase_order_id = db.Column(db.Integer, db.ForeignKey('purchase_order.id'))
-#     amount = db.Column(db.Float, nullable=False)
-#     payment_type = db.Column(db.String(20), default='Cash')  # Cash, Bank, Mobile Money
-#     payment_date = db.Column(db.DateTime, default=datetime.utcnow)
-#     reference = db.Column(db.String(100))
-#     transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'))
-
-
+        self.total_price = round(self.quantity * self.unit_price, 2)
 
 class SupplierPayment(db.Model, StatusMixin):
     __tablename__ = 'supplier_payment'
@@ -163,27 +169,25 @@ class SupplierPayment(db.Model, StatusMixin):
     payment_type = db.Column(db.String(20), default='Cash')  # Cash, Bank, Mobile Money
     payment_date = db.Column(db.DateTime, default=datetime.utcnow)
     reference = db.Column(db.String(100))
-    # transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'))
     transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'), nullable=True)
     status = db.Column(db.Integer, default=1)
 
-
-
 # ------------------ Sales & Invoices ------------------
-# ------------------ Sales ------------------
 class Sale(db.Model, StatusMixin):
     __tablename__ = 'sale'
 
     id = db.Column(db.Integer, primary_key=True)
     sale_number = db.Column(db.String(50), unique=True, nullable=False)
 
+    memo = db.Column(db.String(255))  # Optional memo or notes
+
     # Customer
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False, default=1)  # Default Walk-in
     
     # Totals
-    total_amount = db.Column(db.Float, default=0)     # Total for all items
-    total_paid = db.Column(db.Float, default=0)       # Total amount paid
-    balance = db.Column(db.Float, default=0)          # Remaining balance
+    total_amount = db.Column(db.Float, default=0.0)     # Total for all items
+    total_paid = db.Column(db.Float, default=0.0)       # Total amount paid
+    balance = db.Column(db.Float, default=0.0)          # Remaining balance
 
     # Status
     payment_status = db.Column(db.String(20), default='Pending')  # Pending, Paid, Partial, Overpaid
@@ -197,7 +201,6 @@ class Sale(db.Model, StatusMixin):
     items = db.relationship('SaleItem', backref='sale', lazy=True, cascade="all, delete-orphan")
     status = db.Column(db.Integer, default=1)
 
-
     def update_totals(self):
         """Recalculate total_amount, balance, and update payment_status automatically."""
         self.total_amount = sum(item.total_price for item in self.items)
@@ -210,40 +213,31 @@ class Sale(db.Model, StatusMixin):
         else:
             self.payment_status = 'Pending'
 
-
 class SaleItem(db.Model, StatusMixin):
     __tablename__ = 'sale_item'
 
     id = db.Column(db.Integer, primary_key=True)
     sale_id = db.Column(db.Integer, db.ForeignKey('sale.id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    unit_id = db.Column(db.Integer, db.ForeignKey('product_unit.id'), nullable=True)  # Link to unit
 
     product_name = db.Column(db.String(100))
-    quantity = db.Column(db.Integer, default=1)
-    unit_price = db.Column(db.Float, default=0)
-    total_price = db.Column(db.Float, default=0)
+    quantity = db.Column(db.Float, default=1.0)  # Quantity in the selected unit (float for fractions)
+    unit_price = db.Column(db.Float, default=0.0)
+    total_price = db.Column(db.Float, default=0.0)
 
     # Optional: Track which transaction added this item
     transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'), nullable=True)
 
     # Relationship
     product = db.relationship('Product', backref='sale_items', lazy=True)
+    unit = db.relationship('ProductUnit', backref='sale_items', lazy=True)
 
     status = db.Column(db.Integer, default=1)
 
-
     def calculate_total(self):
         """Automatically calculate total_price."""
-        self.total_price = self.quantity * self.unit_price
-
-
-# class Invoice(db.Model, StatusMixin):
-#     id = db.Column(db.Integer, primary_key=True)
-#     sale_id = db.Column(db.Integer, db.ForeignKey('sale.id'))
-#     invoice_number = db.Column(db.String(50), unique=True, nullable=False)
-#     transaction_date = db.Column(db.DateTime, default=datetime.utcnow)
-#     total_amount = db.Column(db.Float, default=0)
-#     transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'))
+        self.total_price = round(self.quantity * self.unit_price, 2)
 
 # ------------------ Payments ------------------
 class Payment(db.Model, StatusMixin):
@@ -269,11 +263,12 @@ class InventoryTransaction(db.Model, StatusMixin):
     purchase_order_id = db.Column(db.Integer, db.ForeignKey('purchase_order.id'), nullable=True)
     sale_id = db.Column(db.Integer, db.ForeignKey('sale.id'), nullable=True)
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    unit_id = db.Column(db.Integer, db.ForeignKey('product_unit.id'), nullable=True)  # Link to unit for transaction
 
     # Transaction details
-    quantity = db.Column(db.Integer, nullable=False)
-    unit_price = db.Column(db.Float, default=0)
-    total_price = db.Column(db.Float, default=0)
+    quantity = db.Column(db.Float, nullable=False)  # Quantity in the unit
+    unit_price = db.Column(db.Float, default=0.0)
+    total_price = db.Column(db.Float, default=0.0)
     transaction_type = db.Column(db.String(20), nullable=False)  # 'Purchase' or 'Sale'
 
     # Relationships
@@ -281,10 +276,10 @@ class InventoryTransaction(db.Model, StatusMixin):
     purchase_order = db.relationship('PurchaseOrder', backref='inventory_transactions', lazy=True)
     sale = db.relationship('Sale', backref='inventory_transactions', lazy=True)
     transaction_number = db.relationship('TransactionNumber', backref='inventory_transactions', lazy=True)
+    unit = db.relationship('ProductUnit', backref='inventory_transactions', lazy=True)
 
     def __repr__(self):
         return f"<InventoryTransaction {self.transaction_type} - ProductID={self.product_id} Qty={self.quantity}>"
-
 
 # ------------------ Permissions & Users ------------------
 user_permissions = db.Table(
@@ -304,7 +299,6 @@ class Permission(db.Model, StatusMixin):
 class User(db.Model, StatusMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
-    # password_hash = db.Column(db.String(128), nullable=False)
     password_hash = db.Column(db.String(512), nullable=False)  # Increased size
 
     role = db.Column(db.String(20), default='Staff')
@@ -345,17 +339,32 @@ class User(db.Model, StatusMixin):
     
 # ------------------ Stock Adjustments ------------------
 class StockAdjustment(db.Model, StatusMixin):
+    __tablename__ = 'stock_adjustment'
+
     id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey('product.id'))
-    adjustment_type = db.Column(db.String(20))
-    quantity = db.Column(db.Integer, nullable=False)
-    reason = db.Column(db.String(200))
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    unit_id = db.Column(db.Integer, db.ForeignKey('product_unit.id'), nullable=True)  # Link to unit
+    adjustment_type = db.Column(db.String(20), nullable=False)  # 'Increase', 'Decrease', 'Correction'
+    quantity = db.Column(db.Float, default=0.0, nullable=False)  # Quantity in the unit
+
+    # Newly added fields
+    previous_quantity = db.Column(db.Float, default=0.0, nullable=True)
+    new_quantity = db.Column(db.Float, default=0.0, nullable=True)
+
+    reason = db.Column(db.String(200), nullable=False)
+    transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'), nullable=True)
+
     adjusted_at = db.Column(db.DateTime, default=datetime.utcnow)
-    transaction_no = db.Column(db.Integer, db.ForeignKey('transaction_number.id'))
+
+    # Relationships
+    product = db.relationship('Product', backref=db.backref('stock_adjustments', lazy=True))
+    unit = db.relationship('ProductUnit', backref=db.backref('stock_adjustments', lazy=True))
+    transaction_number = db.relationship('TransactionNumber', backref=db.backref('stock_adjustments', lazy=True))
+
+    def __repr__(self):
+        return f"<StockAdjustment {self.adjustment_type} {self.quantity} for Product {self.product_id}>"
 
 # ------------------ Expenses ------------------
-
-# -------------------- Expense Header --------------------
 class Expense(db.Model, StatusMixin):
     __tablename__ = 'expense'
 
@@ -367,7 +376,7 @@ class Expense(db.Model, StatusMixin):
     payment_account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
     # Total paid for this expense transaction
-    total_amount = db.Column(db.Float, default=0, nullable=False)
+    total_amount = db.Column(db.Float, default=0.0, nullable=False)
 
     # Reference or memo field
     reference = db.Column(db.String(100))
@@ -385,8 +394,6 @@ class Expense(db.Model, StatusMixin):
     def __repr__(self):
         return f"<Expense {self.id} - {self.description}>"
 
-
-# -------------------- Expense Items --------------------
 class ExpenseItem(db.Model, StatusMixin):
     __tablename__ = 'expense_item'
 
@@ -409,14 +416,12 @@ class ExpenseItem(db.Model, StatusMixin):
 # -------------------------------
 # Enums for Account Types & Subtypes
 # -------------------------------
-
 class AccountTypeEnum(enum.Enum):
     ASSET = "ASSET"
     LIABILITY = "LIABILITY"
     EQUITY = "EQUITY"
     REVENUE = "REVENUE"
     EXPENSE = "EXPENSE"
-
 
 class AssetSubtypeEnum(enum.Enum):
     CASH = "Cash"
@@ -444,16 +449,14 @@ class ExpenseSubtypeEnum(enum.Enum):
     RENT = "Rent Expense"
     SALARIES = "Salaries Expense"
     UTILITIES = "Utilities Expense"
-    OFFICE_SUPPLIES ="Office Supplies Expense"
-    OTHER_EXPENSES="Other Expenses"
-    BANK_FEES ="Banks fees Expense"
-    ADVERTISING="Advertising Expense"
-    TRAINING ="Training Expense"
-    INTEREST ="Interest Expense"
-    TRAVEL ="Travel Expense"
-    TAXES= "Taxes Expense"
-
-
+    OFFICE_SUPPLIES = "Office Supplies Expense"
+    OTHER_EXPENSES = "Other Expenses"
+    BANK_FEES = "Banks fees Expense"
+    ADVERTISING = "Advertising Expense"
+    TRAINING = "Training Expense"
+    INTEREST = "Interest Expense"
+    TRAVEL = "Travel Expense"
+    TAXES = "Taxes Expense"
 
 # -------------------------------
 # Account Model
@@ -485,9 +488,7 @@ class Account(db.Model, StatusMixin):
 # ------------------ General Ledger ------------------
 class GeneralLedger(db.Model, StatusMixin):
     id = db.Column(db.Integer, primary_key=True)
-    account_id = db.Column(db.Integer, nullable=False)
-    # account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
-
+    account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
     transaction_type = db.Column(db.String(10), nullable=False)
     amount = db.Column(db.Float, nullable=False)
     description = db.Column(db.String(200))

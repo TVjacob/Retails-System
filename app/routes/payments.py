@@ -236,6 +236,7 @@ def get_sale_details(sale_id, doc_type='invoice'):
     sale = (
         Sale.query
         .options(joinedload(Sale.items), joinedload(Sale.customer))
+        .options()
         .filter(Sale.id==sale_id, Sale.status.in_([1, 4,3]))
         .first()
     )
@@ -259,6 +260,7 @@ def get_sale_details(sale_id, doc_type='invoice'):
             "product_name": item.product_name,
             "quantity": item.quantity,
             "unit_price": item.unit_price,
+            "unit": item.unit.unit_name  if item.unit  else  " peice ",
             "total_price": item.total_price
         }
         for item in sale.items if item.status == 1

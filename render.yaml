@@ -1,20 +1,25 @@
 services:
   - type: web
     name: sjhardware
-    runtime: python  # Added missing property "runtime"
+    runtime: python
+    buildCommand: ./render-build.sh          # This is the magic line
+    startCommand: gunicorn run:app --bind 0.0.0.0:$PORT
     plan: free
     region: oregon
     autoDeploy: true
     healthCheckPath: /api/health
+
     envVars:
-      - key: ENV  # Changed to correct structure
+      - key: ENV
         value: production
-      - key: SECRET_KEY  # Changed to correct structure
-        value: supersecretkey
+      - key: SECRET_KEY
+        value: sjhardware-ultra-secure-2025-key
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sjhardware-db
+          property: connectionString
 
 databases:
   - name: sjhardware-db
-    databaseName: sjhardware
-    user: sj_user
     plan: free
     region: oregon

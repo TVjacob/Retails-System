@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from app.models import AccountTypeEnum, Category, GeneralLedger, Payment, PurchaseOrderItem, SaleItem, PurchaseOrder, Expense,Customer, Supplier, Sale, PurchaseOrder, Product, Account
+from app.models import AccountTypeEnum, Category, GeneralLedger, Payment, ProductUnit, PurchaseOrderItem, SaleItem, PurchaseOrder, Expense,Customer, Supplier, Sale, PurchaseOrder, Product, Account
 from app import db
 from sqlalchemy import func
 from datetime import datetime, timedelta
@@ -1868,6 +1868,223 @@ def balance_sheet_report():
         }
     })
 
+# @reports_bp.route("/purchased-product", methods=["GET"])
+# @token_required
+# def purchase_report():
+#     page = int(request.args.get("page", 1))
+#     per_page = 100
+
+#     search = request.args.get("search", "").strip()
+#     start_date = request.args.get("start_date", None)
+#     end_date = request.args.get("end_date", None)
+
+#     query = (
+#         db.session.query(
+#             PurchaseOrder.id.label("purchase_id"),
+#             PurchaseOrder.invoice_number,
+#             PurchaseOrder.purchase_date,
+#             PurchaseOrder.memo,
+#             Supplier.name.label("supplier_name"),
+#             Product.name.label("product_name"),
+#             Category.name.label("category_name"),
+#             PurchaseOrderItem.quantity,
+#             PurchaseOrderItem.unit_price,
+#             PurchaseOrderItem.total_price,
+#         )
+#         .join(PurchaseOrderItem, PurchaseOrder.id == PurchaseOrderItem.purchase_order_id)
+#         .join(Product, Product.id == PurchaseOrderItem.product_id)
+#         .outerjoin(Category, Category.id == Product.category_id)
+#         .outerjoin(Supplier, Supplier.id == PurchaseOrder.supplier_id)
+#         .filter(PurchaseOrder.status != 9)
+#     )
+
+#     # -------------------------------
+#     # 🔍 Improved Search Filters
+#     # -------------------------------
+#     if search:
+#         query = query.filter(
+#             # or_(
+#                 Product.name.ilike(f"%{search}%"),
+#                 # PurchaseOrder.invoice_number.ilike(f"%{search}%"),
+#                 # Supplier.name.ilike(f"%{search}%"),
+#                 # Category.name.ilike(f"%{search}%"),
+#                 # PurchaseOrder.memo.ilike(f"%{search}%"),
+#             # )
+#         )
+
+#     # -------------------------------
+#     # 📅 Date Range Filters
+#     # -------------------------------
+#     if start_date:
+#         query = query.filter(
+#             cast(PurchaseOrder.purchase_date, String) >= start_date
+#         )
+
+#     if end_date:
+#         query = query.filter(
+#             cast(PurchaseOrder.purchase_date, String) <= end_date
+#         )
+
+#     total_records = query.count()
+
+#     results = (
+#         query.order_by(PurchaseOrder.purchase_date.desc())
+#         .paginate(page=page, per_page=per_page, error_out=False)
+#     )
+
+#     data = []
+#     total_qty = 0
+#     total_amount = 0
+
+#     for row in results.items:
+#         total_qty += row.quantity
+#         total_amount += row.total_price
+
+#         data.append({
+#             "purchase_id": row.purchase_id,
+#             "invoice_number": row.invoice_number,
+#             "purchase_date": row.purchase_date,
+#             "memo": row.memo,
+#             "supplier": row.supplier_name,
+#             "product": row.product_name,
+#             "category": row.category_name,
+#             "qty": row.quantity,
+#             "unit_price": row.unit_price,
+#             "total_price": row.total_price,
+#         })
+
+#     return jsonify({
+#         "page": page,
+#         "per_page": per_page,
+#         "total_records": total_records,
+#         "totals": {
+#             "total_quantity": total_qty,
+#             "total_amount": total_amount
+#         },
+#         "data": data
+#     }), 200
+# from sqlalchemy import or_, cast, String, func
+
+# @reports_bp.route("/purchased-product", methods=["GET"])
+# @token_required
+# def purchase_report():
+#     page = int(request.args.get("page", 1))
+#     per_page = 100
+
+#     search = request.args.get("search", "").strip()
+#     start_date = request.args.get("start_date")
+#     end_date = request.args.get("end_date")
+
+#     base_query = (
+#         db.session.query(
+#             PurchaseOrderItem.id.label("item_id"),
+#             PurchaseOrder.id.label("purchase_id"),
+#             PurchaseOrder.invoice_number,
+#             PurchaseOrder.purchase_date,
+#             PurchaseOrder.memo,
+#             Supplier.name.label("supplier_name"),
+#             Product.name.label("product_name"),
+#             Category.name.label("category_name"),
+#             PurchaseOrderItem.quantity,
+#             PurchaseOrderItem.unit_price,
+#             PurchaseOrderItem.total_price,
+#         )
+#         .join(PurchaseOrder, PurchaseOrder.id == PurchaseOrderItem.purchase_order_id)
+#         .join(Product, Product.id == PurchaseOrderItem.product_id)
+#         .outerjoin(Category, Category.id == Product.category_id)
+#         .outerjoin(Supplier, Supplier.id == PurchaseOrder.supplier_id)
+#         .filter(PurchaseOrder.status != 9)
+#         .distinct(PurchaseOrderItem.id)     # ✅ prevent duplicates
+#     )
+
+#     # -------------------------------
+#     # 🔍 Search
+#     # -------------------------------
+#     if search:
+#         base_query = base_query.filter(
+#             or_(
+#                 Product.name.ilike(f"%{search}%"),
+#                 PurchaseOrder.invoice_number.ilike(f"%{search}%"),
+#                 Supplier.name.ilike(f"%{search}%"),
+#                 Category.name.ilike(f"%{search}%"),
+#                 PurchaseOrder.memo.ilike(f"%{search}%"),
+#             )
+#         )
+
+#     # -------------------------------
+#     # 📅 Date filters
+#     # -------------------------------
+#     if start_date:
+#         base_query = base_query.filter(
+#             cast(PurchaseOrder.purchase_date, String) >= start_date
+#         )
+
+#     if end_date:
+#         base_query = base_query.filter(
+#             cast(PurchaseOrder.purchase_date, String) <= end_date
+#         )
+
+#     # -------------------------------
+#     # ✅ Correct total count
+#     # -------------------------------
+#     total_records = (
+#         db.session.query(func.count(func.distinct(PurchaseOrderItem.id)))
+#         .select_from(base_query.subquery())
+#         .scalar()
+#     )
+
+#     # -------------------------------
+#     # ✅ Pagination (FIXED ORDER BY)
+#     # -------------------------------
+#     results = (
+#         base_query
+#         .order_by(
+#             PurchaseOrderItem.id,                   # 👈 MUST BE FIRST
+#             PurchaseOrder.purchase_date.desc()
+#         )
+#         .paginate(page=page, per_page=per_page, error_out=False)
+#     )
+
+#     data = []
+#     total_qty = 0
+#     total_amount = 0
+
+#     for row in results.items:
+#         total_qty += row.quantity or 0
+#         total_amount += row.total_price or 0
+
+#         data.append({
+#             "purchase_id": row.purchase_id,
+#             "invoice_number": row.invoice_number,
+#             "purchase_date": row.purchase_date,
+#             "memo": row.memo,
+#             "supplier": row.supplier_name,
+#             "product": row.product_name,
+#             "category": row.category_name,
+#             "qty": row.quantity,
+#             "unit_price": row.unit_price,
+#             "total_price": row.total_price,
+#         })
+
+#     return jsonify({
+#         "page": page,
+#         "per_page": per_page,
+#         "total_records": total_records,
+#         "totals": {
+#             "total_quantity": total_qty,
+#             "total_amount": total_amount
+#         },
+#         "data": data
+#     }), 200
+
+
+
+
+from sqlalchemy import or_, cast, String, func, distinct
+from sqlalchemy import or_
+from flask import jsonify, request
+# assuming db, PurchaseOrder, PurchaseOrderItem, Product, Category, Supplier are already imported
+
 @reports_bp.route("/purchased-product", methods=["GET"])
 @token_required
 def purchase_report():
@@ -1875,10 +2092,13 @@ def purchase_report():
     per_page = 100
 
     search = request.args.get("search", "").strip()
-    start_date = request.args.get("start_date", None)
-    end_date = request.args.get("end_date", None)
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
 
-    query = (
+    # ────────────────────────────────────────────────────────────────
+    # Detailed query — one row per purchased item
+    # ────────────────────────────────────────────────────────────────
+    base_query = (
         db.session.query(
             PurchaseOrder.id.label("purchase_id"),
             PurchaseOrder.invoice_number,
@@ -1887,9 +2107,9 @@ def purchase_report():
             Supplier.name.label("supplier_name"),
             Product.name.label("product_name"),
             Category.name.label("category_name"),
-            PurchaseOrderItem.quantity,
-            PurchaseOrderItem.unit_price,
-            PurchaseOrderItem.total_price,
+            PurchaseOrderItem.quantity.label("quantity"),
+            PurchaseOrderItem.unit_price.label("unit_price"),
+            PurchaseOrderItem.total_price.label("total_price")
         )
         .join(PurchaseOrderItem, PurchaseOrder.id == PurchaseOrderItem.purchase_order_id)
         .join(Product, Product.id == PurchaseOrderItem.product_id)
@@ -1898,59 +2118,63 @@ def purchase_report():
         .filter(PurchaseOrder.status != 9)
     )
 
-    # -------------------------------
-    # 🔍 Improved Search Filters
-    # -------------------------------
+    # Search filter ───────────────────────────────────────────────────
     if search:
-        query = query.filter(
+        base_query = base_query.filter(
             or_(
-                Product.name.ilike(f"%{search}%"),
                 PurchaseOrder.invoice_number.ilike(f"%{search}%"),
                 Supplier.name.ilike(f"%{search}%"),
+                Product.name.ilike(f"%{search}%"),
                 Category.name.ilike(f"%{search}%"),
                 PurchaseOrder.memo.ilike(f"%{search}%"),
             )
         )
 
-    # -------------------------------
-    # 📅 Date Range Filters
-    # -------------------------------
+    # Date filter ─────────────────────────────────────────────────────
     if start_date:
-        query = query.filter(
-            cast(PurchaseOrder.purchase_date, String) >= start_date
+        base_query = base_query.filter(
+            PurchaseOrder.purchase_date >= f"{start_date} 00:00:00"
         )
-
     if end_date:
-        query = query.filter(
-            cast(PurchaseOrder.purchase_date, String) <= end_date
+        base_query = base_query.filter(
+            PurchaseOrder.purchase_date <= f"{end_date} 23:59:59"
         )
 
-    total_records = query.count()
+    # Get total count for pagination
+    total_records = base_query.count()
 
+    # Fetch paginated results
     results = (
-        query.order_by(PurchaseOrder.purchase_date.desc())
-        .paginate(page=page, per_page=per_page, error_out=False)
+        base_query
+        .order_by(PurchaseOrder.purchase_date.desc(), PurchaseOrder.id, Product.name)
+        .limit(per_page)
+        .offset((page - 1) * per_page)
+        .all()
     )
 
+    # Prepare response data
     data = []
-    total_qty = 0
-    total_amount = 0
+    grand_total_qty = 0
+    grand_total_amount = 0
 
-    for row in results.items:
-        total_qty += row.quantity
-        total_amount += row.total_price
+    for row in results:
+        qty = row.quantity or 0
+        total = row.total_price or 0
+
+        grand_total_qty += qty
+        grand_total_amount += total
 
         data.append({
             "purchase_id": row.purchase_id,
             "invoice_number": row.invoice_number,
-            "purchase_date": row.purchase_date,
+            "purchase_date": row.purchase_date.isoformat() if row.purchase_date else None,
             "memo": row.memo,
             "supplier": row.supplier_name,
             "product": row.product_name,
-            "category": row.category_name,
-            "qty": row.quantity,
-            "unit_price": row.unit_price,
-            "total_price": row.total_price,
+            "category": row.category_name or None,
+            "quantity": float(qty),
+            "unit_price": round(float(row.unit_price or 0), 2),
+            "total_price": float(total)
         })
 
     return jsonify({
@@ -1958,12 +2182,11 @@ def purchase_report():
         "per_page": per_page,
         "total_records": total_records,
         "totals": {
-            "total_quantity": total_qty,
-            "total_amount": total_amount
+            "total_quantity": float(grand_total_qty),
+            "total_amount": float(grand_total_amount)
         },
         "data": data
     }), 200
-
 
 # @reports_bp.route("/purchased-product", methods=["GET"])
 # @token_required
@@ -2112,6 +2335,9 @@ def sales_profit_report():
             Category.name.label("category_name"),
             SaleItem.quantity,
             SaleItem.unit_price.label("selling_price"),
+            # SaleItem.label("selling_price"),
+            SaleItem.unit_id.label("unit"),
+
             final_purchase_price.c.unit_price.label("purchase_price"),
         )
         .join(SaleItem, Sale.id == SaleItem.sale_id)
@@ -2168,7 +2394,8 @@ def sales_profit_report():
 
         sale_summary[row.sale_id]["profit_total"] += profit
         sale_summary[row.sale_id]["cost_total"] += cost
-
+        print("unit ..   ", row.unit)
+        unit_name = db.session.query(ProductUnit).filter(ProductUnit.id==row.unit).first()
         raw_data.append({
             "sale_id": row.sale_id,
             "invoice_number": row.sale_number,
@@ -2176,6 +2403,7 @@ def sales_profit_report():
             "customer": row.customer_name,
             "product": row.product_name,
             "category": row.category_name,
+            "unit":unit_name.unit_name if unit_name else "",
             "qty": row.quantity,
             "selling_price": row.selling_price,
             "purchase_price": purchase_price,
@@ -2494,3 +2722,210 @@ def sales_profit_report():
 #         },
 #         "data": data
 #     }), 200
+
+
+# @token_required
+# @reports_bp.route('/customer-payments', methods=['GET'])
+# def customer_payments_report():
+#     start_date_str = request.args.get('start_date')
+#     end_date_str = request.args.get('end_date')
+#     customer_id = request.args.get('customer_id', type=int)
+
+#     filters = [Payment.status == 1]
+
+#     if start_date_str:
+#         try:
+#             start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
+#             filters.append(Payment.payment_date >= start_date)
+#         except ValueError:
+#             return jsonify({"error": "Invalid start_date format. Use YYYY-MM-DD"}), 400
+
+#     if end_date_str:
+#         try:
+#             end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
+#             filters.append(Payment.payment_date <= end_date)
+#         except ValueError:
+#             return jsonify({"error": "Invalid end_date format. Use YYYY-MM-DD"}), 400
+
+#     if customer_id:
+#         filters.append(Sale.customer_id == customer_id)
+
+#     # Base query: Join Payment -> Sale -> Customer
+#     query = db.session.query(
+#         Customer.id.label('customer_id'),
+#         Customer.name,
+#         Customer.phone,
+#         Customer.email,
+#         Customer.address,
+#         func.sum(Payment.amount).label('total_paid'),
+#         Payment.id.label('payment_id'),
+#         Payment.payment_date,
+#         Payment.amount,
+#         Payment.payment_type,
+#         Payment.reference,
+#         Sale.id.label('sale_id'),
+#         Sale.sale_number,
+#         Sale.total_amount.label('sale_total'),
+#         Sale.balance.label('sale_balance')
+#     ).join(Sale, Sale.id == Payment.sale_id
+#     ).join(Customer, Customer.id == Sale.customer_id
+#     ).filter(*filters
+#     ).group_by(Customer.id, Payment.id
+#     ).order_by(Payment.payment_date.desc()
+#     ).all()
+
+#     # Aggregate into structured response
+#     customers = {}
+#     total_received = 0.0
+
+#     for row in query:
+#         cid = row.customer_id
+#         if cid not in customers:
+#             customers[cid] = {
+#                 "id": cid,
+#                 "name": row.name,
+#                 "phone": row.phone or "",
+#                 "email": row.email or "",
+#                 "address": row.address or "",
+#                 "total_paid": float(row.total_paid or 0),
+#                 "payments": []
+#             }
+
+#         customers[cid]["payments"].append({
+#             "payment_id": row.payment_id,
+#             "payment_date": row.payment_date.strftime('%Y-%m-%d %H:%M:%S') if row.payment_date else "",
+#             "amount": float(row.amount or 0),
+#             "payment_type": row.payment_type,
+#             "reference": row.reference or "",
+#             "sale_id": row.sale_id,
+#             "sale_number": row.sale_number or "",
+#             "sale_total": float(row.sale_total or 0),
+#             "sale_balance": float(row.sale_balance or 0)
+#         })
+
+#         total_received += float(row.amount or 0)
+
+#     response = {
+#         "customers": list(customers.values()),
+#         "total_received": total_received,
+#         "period_start": start_date_str or "",
+#         "period_end": end_date_str or ""
+#     }
+
+#     return jsonify(response), 200
+
+
+@token_required
+@reports_bp.route('/customer-payments', methods=['GET'])
+def customer_payments_report():
+    start_date_str = request.args.get('start_date')
+    end_date_str = request.args.get('end_date')
+    customer_id = request.args.get('customer_id', type=int)
+
+    # Base filters
+    filters = [Payment.status == 1]
+
+    if start_date_str:
+        try:
+            start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
+            filters.append(Payment.payment_date >= start_date)
+        except ValueError:
+            return jsonify({"error": "Invalid start_date format. Use YYYY-MM-DD"}), 400
+
+    if end_date_str:
+        try:
+            end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
+            filters.append(Payment.payment_date <= end_date)
+        except ValueError:
+            return jsonify({"error": "Invalid end_date format. Use YYYY-MM-DD"}), 400
+
+    if customer_id is not None:
+        filters.append(Sale.customer_id == customer_id)
+
+    # Query: one row per payment (no GROUP BY needed anymore)
+    payments = (
+        db.session.query(
+            Customer.id.label('customer_id'),
+            Customer.name.label('customer_name'),
+            Customer.phone.label('customer_phone'),
+            Customer.email.label('customer_email'),
+            Customer.address.label('customer_address'),
+            Payment.id.label('payment_id'),
+            Payment.payment_date,
+            Payment.amount.label('payment_amount'),
+            Payment.payment_type,
+            Payment.reference.label('payment_reference'),
+            Sale.id.label('sale_id'),
+            Sale.sale_number,
+            Sale.total_amount.label('sale_total'),
+            Sale.balance.label('sale_balance')
+        )
+        .join(Sale, Sale.id == Payment.sale_id)
+        .join(Customer, Customer.id == Sale.customer_id)
+        .filter(*filters)
+        .order_by(Payment.payment_date.desc())
+        .all()
+    )
+
+    # Group by customer in Python + calculate totals
+    from collections import defaultdict
+
+    customer_map = defaultdict(lambda: {
+        "id": None,
+        "name": "",
+        "phone": "",
+        "email": "",
+        "address": "",
+        "total_paid": 0.0,
+        "payments": []
+    })
+
+    grand_total_received = 0.0
+
+    for row in payments:
+        cid = row.customer_id
+
+        # First time seeing this customer
+        if customer_map[cid]["id"] is None:
+            customer_map[cid].update({
+                "id": cid,
+                "name": row.customer_name,
+                "phone": row.customer_phone or "",
+                "email": row.customer_email or "",
+                "address": row.customer_address or ""
+            })
+
+        amount = float(row.payment_amount or 0)
+
+        customer_map[cid]["total_paid"] += amount
+        grand_total_received += amount
+
+        customer_map[cid]["payments"].append({
+            "payment_id": row.payment_id,
+            "payment_date": (
+                row.payment_date.strftime('%Y-%m-%d %H:%M:%S')
+                if row.payment_date else ""
+            ),
+            "amount": amount,
+            "payment_type": row.payment_type or "Unknown",
+            "reference": row.payment_reference or "",
+            "sale_id": row.sale_id,
+            "sale_number": row.sale_number or "—",
+            "sale_total": float(row.sale_total or 0),
+            "sale_balance": float(row.sale_balance or 0)
+        })
+
+    # Prepare final response
+    customers_list = list(customer_map.values())
+
+    response = {
+        "customers": customers_list,
+        "total_received": grand_total_received,
+        "period_start": start_date_str or "",
+        "period_end": end_date_str or "",
+        "customer_count": len(customers_list),
+        "payment_count": sum(len(c["payments"]) for c in customers_list),
+        "filtered_by_customer": bool(customer_id)
+    }
+
+    return jsonify(response), 200

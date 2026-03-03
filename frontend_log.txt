@@ -1095,3 +1095,510 @@
 [2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/reports/PurchaseProduct.vue, /src/pages/reports/PurchaseProduct.vue?vue&type=style&index=0&scoped=b8087c46&lang.css, /src/main.css[22m
 [2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/reports/SalesProfit.vue, /src/pages/reports/SalesProfit.vue?vue&type=style&index=0&scoped=de85616c&lang.css, /src/main.css[22m
 [2m12:55:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SalesList.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1972[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2212[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2235[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2969[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3461[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2074[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3775[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2872[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2027[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1610[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m6:51:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sidebar.vue, /src/main.css[22m
+[2m6:55:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Products.vue, /src/pages/Purchases.vue, /src/pages/Sales.vue, /src/pages/Expenses.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/SalesList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/reports/Performance.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/Generalledger.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/PurchaseOrderEdit.vue, /src/pages/reports/Acoa.vue, /src/pages/Accounts.vue, /src/pages/reports/BalanceSheet.vue, /src/pages/reports/PurchaseProduct.vue, /src/pages/UserProfile.vue, /src/pages/reports/SalesProfit.vue, /src/components/Sidebar.vue, /src/components/Navbar.vue, /src/pages/PaymentModal.vue, /src/pages/PaymentPurchaseModal.vue, /src/main.css[22m
+[2m6:57:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Products.vue, /src/pages/Purchases.vue, /src/pages/Sales.vue, /src/pages/Expenses.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/SalesList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/reports/Performance.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/Generalledger.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/PurchaseOrderEdit.vue, /src/pages/reports/Acoa.vue, /src/pages/Accounts.vue, /src/pages/reports/BalanceSheet.vue, /src/pages/reports/PurchaseProduct.vue, /src/pages/UserProfile.vue, /src/pages/reports/SalesProfit.vue, /src/components/Sidebar.vue, /src/components/Navbar.vue, /src/pages/PaymentModal.vue, /src/pages/PaymentPurchaseModal.vue, /src/main.css[22m
+[2m6:58:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Products.vue, /src/pages/Purchases.vue, /src/pages/Sales.vue, /src/pages/Expenses.vue, /src/pages/Supplier.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/SalesList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/reports/Performance.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/Generalledger.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/Login.vue, /src/pages/PurchaseOrderEdit.vue, /src/pages/reports/Acoa.vue, /src/pages/Accounts.vue, /src/pages/reports/BalanceSheet.vue, /src/pages/reports/PurchaseProduct.vue, /src/pages/UserProfile.vue, /src/pages/reports/SalesProfit.vue, /src/components/Sidebar.vue, /src/components/Navbar.vue, /src/pages/PaymentModal.vue, /src/pages/PaymentPurchaseModal.vue, /src/main.css[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1540[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1673[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1712[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m7:07:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Login.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1985[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3033[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2645[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3442[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1860[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1694[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2193[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2017[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1900[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1744[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m925[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1091[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1806[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3498[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2146[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2016[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2778[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3551[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1982[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1861[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1876[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1957[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3218[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m1:41:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Sales.vue, /src/pages/Products.vue, /src/pages/Supplier.vue, /src/pages/Purchases.vue, /src/pages/Expenses.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/SalesList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/Performance.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Generalledger.vue, /src/pages/Login.vue, /src/pages/PurchaseOrderEdit.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/Acoa.vue, /src/pages/UserProfile.vue, /src/pages/Accounts.vue, /src/pages/reports/BalanceSheet.vue, /src/pages/reports/SalesProfit.vue, /src/pages/reports/PurchaseProduct.vue, /src/components/Sidebar.vue, /src/components/Navbar.vue, /src/pages/PaymentModal.vue, /src/pages/PaymentPurchaseModal.vue, /src/main.css[22m
+[2m1:41:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Login.vue, /src/main.css[22m

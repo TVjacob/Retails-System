@@ -4,10 +4,12 @@ from app.models import Account, Expense, ExpenseItem, GeneralLedger
 from app.utils.auth import token_required
 from app.utils.gl_utils import post_to_ledger, generate_transaction_number
 from datetime import datetime
+
+from flask import request, jsonify
+from sqlalchemy import or_
+
 # from flask import Blueprint, jsonify
 from sqlalchemy.orm import joinedload
-from sqlalchemy import func, and_, cast, String,or_,case
-from sqlalchemy.orm import aliased
 
 
 expenses_bp = Blueprint('expenses', __name__, url_prefix='/expenses')
@@ -126,7 +128,7 @@ def create_expense():
 #         "description": e.description,
 #         "total_amount": e.total_amount,  # FIXED: replaced 'amount' with 'total_amount'
 #         "payment_account_id": e.payment_account_id,
-#         "expense_date": e.expense_date.strftime('%Y-%m-%d') if e.expense_date else None,
+#         "expense_date": e.expense_date.strftime('%Y-%m-%d'),
 #         "reference": e.reference,
 #         "status": e.status,
 #         "transaction_no": e.transaction_no,
@@ -143,75 +145,94 @@ def create_expense():
 #     } for e in expenses]
     
 #     return jsonify(data)
-# --- Get all expenses with optional search and date filter ---
-# from sqlalchemy.orm import aliased
-# from sqlalchemy import or_
+
 
 @token_required
 @expenses_bp.route('/', methods=['GET'])
 def get_expenses():
-    search = request.args.get("search", "").strip()
-    start_date = request.args.get("start_date")
-    end_date = request.args.get("end_date")
+    # -------------------
+    # Query params
+    # -------------------
+    page = int(request.args.get('page', 1))
+    per_page = int(request.args.get('per_page', 10))
+    search = request.args.get('search')
+    start_date = request.args.get('start_date')
+    end_date = request.args.get('end_date')
 
-    # Aliases
-    PaymentAccount = aliased(Account)
-    ItemAccount = aliased(Account)
+    # -------------------
+    # Base query
+    # -------------------
+    query = Expense.query.filter(Expense.status == 1)
 
-    query = (
-        Expense.query
-        .join(PaymentAccount, PaymentAccount.id == Expense.payment_account_id)
-        .outerjoin(ExpenseItem, ExpenseItem.expense_id == Expense.id)
-        .outerjoin(ItemAccount, ItemAccount.id == ExpenseItem.account_id)
-        .filter(Expense.status == 1)
-    )
-
-    # Date filters
+    # -------------------
+    # Date filtering
+    # -------------------
     if start_date:
-        query = query.filter(Expense.expense_date >= start_date)
-    if end_date:
-        query = query.filter(Expense.expense_date <= end_date)
+        start = datetime.strptime(start_date, '%Y-%m-%d')
+        query = query.filter(Expense.expense_date >= start)
 
-    # Search filters (NOW SEARCHES BOTH ACCOUNT TYPES)
+    if end_date:
+        end = datetime.strptime(end_date, '%Y-%m-%d')
+        query = query.filter(Expense.expense_date <= end)
+
+    # -------------------
+    # Search filter
+    # -------------------
     if search:
-        query = query.filter(
+        query = query.outerjoin(ExpenseItem).filter(
             or_(
-                Expense.description.ilike(f"%{search}%"),
-                Expense.reference.ilike(f"%{search}%"),
-                ExpenseItem.item_name.ilike(f"%{search}%"),
-                ExpenseItem.description.ilike(f"%{search}%"),
-                PaymentAccount.name.ilike(f"%{search}%"),
-                ItemAccount.name.ilike(f"%{search}%"),
+                Expense.description.ilike(f'%{search}%'),
+                Expense.reference.ilike(f'%{search}%'),
+                ExpenseItem.item_name.ilike(f'%{search}%')
             )
         )
 
-    expenses = query.order_by(Expense.id.desc()).all()
+    # -------------------
+    # Pagination
+    # -------------------
+    pagination = query.order_by(Expense.expense_date.desc()).paginate(
+        page=page,
+        per_page=per_page,
+        error_out=False
+    )
 
-    # Build response
-    data = []
-    for exp in expenses:
-        items = []
-        for item in exp.items:
-            items.append({
-                "item_id": item.id,
+    expenses = pagination.items
+
+    # -------------------
+    # Response data
+    # -------------------
+    data = [{
+        "id": e.id,
+        "description": e.description,
+        "total_amount": e.total_amount,
+        "payment_account_id": e.payment_account_id,
+        "expense_date": e.expense_date.strftime('%Y-%m-%d'),
+        "reference": e.reference,
+        "status": e.status,
+        "transaction_no": e.transaction_no,
+        "items": [
+            {
+                "id": item.id,
+                "account_id": item.account_id,
                 "item_name": item.item_name,
                 "description": item.description,
-                "amount": item.amount,
-                "account_name": item.account.name if item.account else None
-            })
+                "amount": item.amount
+            }
+            for item in e.items
+        ]
+    } for e in expenses]
 
-        data.append({
-            "expense_id": exp.id,
-            "description": exp.description,
-            "expense_date": exp.expense_date,
-            "reference": exp.reference,
-            "transaction_no": exp.transaction_no,
-            "total_amount": exp.total_amount,
-            "payment_account": exp.payment_account.name if exp.payment_account else None,
-            "items": items
-        })
-
-    return jsonify(data)
+    return jsonify({
+        "data": data,
+        "pagination": {
+            "total": pagination.total,
+            "pages": pagination.pages,
+            "current_page": pagination.page,
+            "per_page": pagination.per_page,
+            "has_next": pagination.has_next,
+            "has_prev": pagination.has_prev
+        }
+    })
 
 
 
@@ -241,7 +262,7 @@ def get_expense(id):
 #     data = request.json
 #     new_amount = data.get('amount', expense.total_amount)
 #     new_description = data.get('description', expense.description)
-#     new_category = data.get('category', expense.category)
+#     # new_category = data.get('category', expense.category)
 #     new_date = data.get('expense_date', expense.expense_date)
 
 #     # Reverse previous GL entries
@@ -262,7 +283,7 @@ def get_expense(id):
 #     # Update expense fields
 #     expense.amount = new_amount
 #     expense.description = new_description
-#     expense.category = new_category
+#     # expense.category = new_category
 #     expense.expense_date = new_date
 #     expense.updated_at = datetime.utcnow()
 #     expense.status = 1
@@ -281,81 +302,61 @@ def get_expense(id):
 #     db.session.commit()
 #     return jsonify({"message": "Expense updated with GL entries", "expense_id": expense.id})
 
-
-
-
+# --- Update expense with full double-entry GL posting ---
 @token_required
 @expenses_bp.route('/<int:id>', methods=['PUT'])
 def update_expense(id):
-    """
-    Soft-delete the old expense (with GL reversal) 
-    and create a new expense with the updated data.
-    """
     try:
+        expense = Expense.query.get_or_404(id)
         data = request.json
-        old_expense = Expense.query.get_or_404(id)
 
-        # ----------------------------------------
-        # 1️⃣ Reverse Old GL Entries
-        # ----------------------------------------
-        if old_expense.transaction_no:
-            old_entries = GeneralLedger.query.filter_by(transaction_no=old_expense.transaction_no).all()
-            for entry in old_entries:
+        # Extract header data
+        new_description = data.get('description', expense.description)
+        new_payment_account_id = data.get('payment_account_id', expense.payment_account_id)
+        new_expense_date = data.get('expense_date', expense.expense_date.strftime('%Y-%m-%d'))
+        new_reference = data.get('reference', expense.reference)
+        new_items_data = data.get('items', [])
+
+        if not new_description or not new_payment_account_id or not new_items_data:
+            return jsonify({"error": "Missing required fields: description, payment_account_id, and items"}), 400
+
+        # Convert date
+        expense_date_obj = datetime.strptime(new_expense_date, '%Y-%m-%d')
+
+        # --- Reverse previous GL entries ---
+        if expense.transaction_no:
+            original_entries = GeneralLedger.query.filter_by(transaction_no=expense.transaction_no).all()
+            for entry in original_entries:
                 reverse_type = 'Credit' if entry.transaction_type == 'Debit' else 'Debit'
-                reversal = GeneralLedger(
+                reverse_entry = GeneralLedger(
                     account_id=entry.account_id,
                     transaction_type=reverse_type,
                     amount=entry.amount,
-                    description=f"Reversal of {entry.description} on expense update",
+                    description=f"Reversal of {entry.description} before update",
                     transaction_date=datetime.utcnow(),
-                    transaction_no=old_expense.transaction_no
+                    transaction_no=entry.transaction_no
                 )
-                db.session.add(reversal)
+                db.session.add(reverse_entry)
 
-        # ----------------------------------------
-        # 2️⃣ Soft Delete Old Expense
-        # ----------------------------------------
-        old_expense.status = 9
-        old_expense.updated_at = datetime.utcnow()
+        # --- Update expense header ---
+        expense.description = new_description
+        expense.payment_account_id = new_payment_account_id
+        expense.expense_date = expense_date_obj
+        expense.reference = new_reference
+        expense.updated_at = datetime.utcnow()
+        expense.status = 1
+        db.session.add(expense)
         db.session.flush()
 
-        # ----------------------------------------
-        # 3️⃣ Create a New Expense (like in create_expense)
-        # ----------------------------------------
-        description = data.get('description')
-        payment_account_id = data.get('payment_account_id')
-        expense_date = data.get('expense_date', datetime.utcnow().strftime('%Y-%m-%d'))
-        reference = data.get('reference')
-        items_data = data.get('items', [])
+        # --- Delete old expense items ---
+        ExpenseItem.query.filter_by(expense_id=expense.id).delete()
+        db.session.flush()
 
-        if not description or not payment_account_id or not items_data:
-            return jsonify({"error": "Missing required fields: description, payment_account_id, and items"}), 400
-
-        expense_date_obj = datetime.strptime(expense_date, '%Y-%m-%d')
-
-        # Create new expense header
-        new_expense = Expense(
-            description=description,
-            expense_date=expense_date_obj,
-            payment_account_id=payment_account_id,
-            reference=reference,
-            status=1
-        )
-        db.session.add(new_expense)
-        db.session.flush()  # to get ID
-
-        # Create new transaction number for GL
-        txn_id, txn_no_str = generate_transaction_number('EXP', transaction_date=expense_date_obj)
-        new_expense.transaction_no = txn_id
-
-        # ----------------------------------------
-        # 4️⃣ Add Items
-        # ----------------------------------------
+        # --- Insert new expense items ---
         total_amount = 0
-        for item in items_data:
+        for item in new_items_data:
             account_id = item.get('account_id')
             item_name = item.get('item_name')
-            description = item.get('description', '')
             amount = float(item.get('amount', 0))
 
             if not account_id or not item_name or amount <= 0:
@@ -364,37 +365,32 @@ def update_expense(id):
             total_amount += amount
 
             expense_item = ExpenseItem(
-                expense_id=new_expense.id,
+                expense_id=expense.id,
                 account_id=account_id,
                 item_name=item_name,
-                description=description,
+                description=item.get('description'),
                 amount=amount
             )
             db.session.add(expense_item)
 
-        new_expense.total_amount = total_amount
+        expense.total_amount = total_amount
+        db.session.flush()
 
-        # ----------------------------------------
-        # 5️⃣ Post New GL Entries
-        # ----------------------------------------
+        # --- Post new GL entries ---
+        txn_id, txn_no_str = generate_transaction_number('EXP', transaction_date=expense_date_obj)
+        expense.transaction_no = txn_id
+
         gl_entries = []
-
-        # Debit each expense item account
-        for item in new_expense.items:
+        for item in expense.items:
             account = db.session.query(Account).filter_by(id=item.account_id).first()
-            if not account:
-                return jsonify({"error": f"Account {item.account_id} not found"}), 400
             gl_entries.append({
                 "account_id": account.code,
                 "transaction_type": "Debit",
                 "amount": item.amount
             })
 
-        # Credit payment account
-        payment_account = db.session.query(Account).filter_by(id=payment_account_id).first()
-        if not payment_account:
-            return jsonify({"error": f"Payment account {payment_account_id} not found"}), 400
-
+        # Credit payment account with total
+        payment_account = db.session.query(Account).filter_by(id=new_payment_account_id).first()
         gl_entries.append({
             "account_id": payment_account.code,
             "transaction_type": "Credit",
@@ -404,19 +400,15 @@ def update_expense(id):
         post_to_ledger(
             gl_entries,
             transaction_no_id=txn_id,
-            description=f"Updated (new) Expense #{new_expense.id}: {new_expense.description}",
+            description=f"Updated Expense #{expense.id}: {new_description}",
             transaction_date=expense_date_obj
         )
 
-        # ----------------------------------------
-        # 6️⃣ Commit Everything
-        # ----------------------------------------
         db.session.commit()
 
         return jsonify({
-            "message": "Expense updated by soft-deleting old one and creating new entry",
-            "old_expense_id": old_expense.id,
-            "new_expense_id": new_expense.id,
+            "message": "Expense updated and posted to GL successfully",
+            "expense_id": expense.id,
             "transaction_no": txn_no_str,
             "total_amount": total_amount
         }), 200
@@ -424,7 +416,6 @@ def update_expense(id):
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
-
 
 # # --- Delete expense with GL reversal ---
 # @expenses_bp.route('/<int:id>', methods=['DELETE'])
