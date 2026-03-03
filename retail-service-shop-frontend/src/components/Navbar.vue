@@ -73,6 +73,8 @@ export default {
         case '/purchaselist': return 'Purchase List';
         case '/saleslist': return 'Sales List';
         case '/accounts': return 'Accounts';
+        case '/stockadjustments': return 'StockAdjustments';
+
         default: return '';
       }
     });

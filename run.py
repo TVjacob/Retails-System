@@ -26,7 +26,7 @@ app = create_app()
 # ==================== SINGLE HEALTH CHECK (ONLY ONE!) ====================
 @app.route("/api/health")
 def health():
-    return {"status": "ok", "message": "SJ Hardware is LIVE and running!"}
+    return {"status": "ok", "message": "Kim Phones is LIVE and running!"}
 
 # ==================== CHART OF ACCOUNTS & PERMISSIONS DATA ====================
 account_updates = [
@@ -366,4 +366,4 @@ if __name__ == "__main__":
         normalize_account_type_enum_uppercase()
         seed_permissions()
         create_default_admin()
-    app.run(host="0.0.0.0", port=5005, debug=True)
+    app.run(host="0.0.0.0", port=5200, debug=True)

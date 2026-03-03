@@ -1,160 +1,245 @@
 <template>
-  <div class="p-6 max-w-6xl mx-auto bg-white shadow-lg rounded-lg">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800">Purchase Order Dashboard</h1>
+  <div class="p-6 max-w-7xl mx-auto bg-white shadow-lg rounded-lg">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">
+      {{ isEditMode ? `Edit Purchase Order #${poId}` : 'Create Purchase Order' }}
+    </h1>
 
-    <!-- --------- Purchase Order Header --------- -->
-    <div class="grid grid-cols-2 gap-4 mb-6">
-      <!-- Supplier Combobox -->
-      <v-autocomplete
-        label="Supplier"
-        v-model="selectedSupplierObj"
-        :items="suppliers"
-        item-title="name"
-        item-value="id"
-        density="comfortable"
-        clearable
-        variant="outlined"
-        :loading="loadingSuppliers"
-        @update:model-value="selectSupplierById"
-      ></v-autocomplete>
-
+    <!-- Purchase Order Header -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <!-- Supplier -->
       <div>
-        <label class="block font-semibold mb-1">Invoice Number</label>
-        <input
-          type="text"
-          v-model="poHeader.invoice_number"
-          class="w-full border border-gray-300 rounded-lg p-2"
-        />
-        <p v-if="errors.invoice_number" class="text-red-500 text-sm">{{ errors.invoice_number }}</p>
+        <label class="block font-semibold mb-1">Supplier *</label>
+        <v-autocomplete
+          v-model="poHeader.supplier_id"
+          :items="suppliers"
+          item-title="name"
+          item-value="id"
+          placeholder="Select supplier"
+          variant="outlined"
+          density="comfortable"
+          clearable
+          :loading="loadingSuppliers"
+        ></v-autocomplete>
+        <p v-if="errors.supplier" class="text-red-500 text-sm mt-1">{{ errors.supplier }}</p>
       </div>
 
+      <!-- Invoice Number -->
+      <div>
+        <label class="block font-semibold mb-1">Invoice Number *</label>
+        <input
+          type="text"
+          v-model.trim="poHeader.invoice_number"
+          placeholder="e.g. INV-2025-001"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
+        />
+        <p v-if="errors.invoice_number" class="text-red-500 text-sm mt-1">{{ errors.invoice_number }}</p>
+      </div>
+
+      <!-- Purchase Date -->
       <div>
         <label class="block font-semibold mb-1">Purchase Date</label>
         <input
           type="date"
           v-model="poHeader.purchase_date"
-          class="w-full border border-gray-300 rounded-lg p-2"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
         />
       </div>
 
+      <!-- Memo -->
       <div>
-        <label class="block font-semibold mb-1">Memo</label>
+        <label class="block font-semibold mb-1">Memo / Note</label>
         <input
           type="text"
           v-model="poHeader.memo"
-          class="w-full border border-gray-300 rounded-lg p-2"
+          placeholder="Optional"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500"
         />
       </div>
     </div>
 
-    <!-- --------- Product Items Table --------- -->
-    <table class="w-full border rounded-lg overflow-hidden relative">
-      <thead>
-        <tr class="bg-gray-100">
-          <th class="p-2 border">Product</th>
-          <th class="p-2 border">Stock</th>
-          <th class="p-2 border">Cost Price</th>
-          <th class="p-2 border">Details</th>
+    <!-- Items Table -->
+    <div class="bg-white rounded-xl shadow overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gradient-to-r from-indigo-100 to-purple-100 text-gray-700">
+          <tr>
+            <th class="p-4 text-left">Product</th>
+            <th class="p-4 text-center">Current Stock</th>
+            <th class="p-4 text-center">Unit</th>
+            <th class="p-4 text-center">Last Purchase Price</th>
+            <th class="p-4 text-center">Cost Price (UGX)</th>
+            <th class="p-4 text-center">Quantity</th>
+            <th class="p-4 text-center">Total (UGX)</th>
+            <th class="p-4 text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, idx) in poItems" :key="idx" class="hover:bg-indigo-50 transition border-b">
+            <!-- Product -->
+            <td class="p-4">
+              <div class="space-y-3">
+                <v-autocomplete
+                  v-model="item.selectedProductObj"
+                  :items="item.searchResults"
+                  item-title="name"
+                  item-value="id"
+                  placeholder="Search product..."
+                  variant="outlined"
+                  density="comfortable"
+                  clearable
+                  hide-details
+                  :loading="item.loading"
+                  @update:search="val => debouncedSearchProduct(val, idx)"
+                  @update:model-value="id => selectProduct(id, idx)"
+                >
+                  <template v-slot:item="{ props, item }">
+                    <v-list-item v-bind="props">
+                      <template v-slot:title>{{ item.raw.name }}</template>
+                      <template v-slot:subtitle>Stock: {{ item.raw.quantity.toFixed(2) }} base units</template>
+                    </v-list-item>
+                  </template>
+                </v-autocomplete>
 
-          <th class="p-2 border">Quantity</th>
-          <th class="p-2 border">Total</th>
-          <th class="p-2 border">Action</th>
-        </tr>
-      </thead>
+                <!-- Selected Product Badge (Very Visible) -->
+                <div
+                  v-if="item.product_name"
+                  class="bg-green-50 border border-green-200 px-4 py-2.5 rounded-lg text-base font-medium text-green-800 flex justify-between items-center shadow-sm"
+                >
+                  <span>Selected: <strong>{{ item.product_name }}</strong></span>
+                  <span class="text-sm text-gray-600">Stock: {{ item.stock_base?.toFixed(2) || '0' }} base</span>
+                </div>
+              </div>
+            </td>
 
-      <tbody>
-        <tr v-for="(item, idx) in poItems" :key="idx" class="relative">
-          <!-- Product Combobox -->
-          <td class="p-2 border w-64">
-            <v-autocomplete
-              v-model="item.selectedProductObj"
-              :items="item.searchResults"
-              item-title="name"
-              item-value="id"
-              label="Search product..."
-              variant="outlined"
-              density="comfortable"
-              clearable
-              hide-details
-              :loading="item.loading"
-              @update:search="(val) => onProductSearch(val, idx)"
-              @update:model-value="(id) => onProductSelect(id, idx)"
-            ></v-autocomplete>
-          </td>
+            <!-- Current Stock (in selected unit) -->
+            <td class="p-4 text-center font-medium">
+              <div class="space-y-1">
+                <span>{{ item.stock_in_unit ? item.stock_in_unit.toFixed(3) : '0.000' }}</span>
+                <div v-if="item.unit_id" class="text-xs text-gray-500">
+                  {{ selectedUnitName(idx) || 'base' }}
+                </div>
+              </div>
+            </td>
 
-          <td class="p-2 border text-center">{{ item.stock_qty }}</td>
+            <!-- Unit -->
+            <td class="p-4">
+              <div class="space-y-3">
+                <v-select
+                  v-model="item.unit_id"
+                  :items="item.units"
+                  item-title="unit_name"
+                  item-value="id"
+                  placeholder="Select unit"
+                  variant="outlined"
+                  density="comfortable"
+                  hide-details
+                  :disabled="!item.product_id"
+                  @update:model-value="() => updateUnitAndLastPrice(idx)"
+                ></v-select>
 
-          <td class="p-2 border">
-            <input
-              type="number"
-              v-model.number="item.cost_price"
-              @input="calculateTotal(item)"
-              class="w-full text-right border border-gray-300 rounded-lg p-2"
-            />
-          </td>
-          <td class="p-2 border text-center">{{ item.category_name }}</td>
+                <!-- Selected Unit Badge (Very Visible) -->
+                <div
+                  v-if="item.unit_id && selectedUnitName(idx)"
+                  class="bg-indigo-50 border border-indigo-200 px-4 py-2 rounded-lg text-base font-medium text-indigo-800 text-center shadow-sm"
+                >
+                  Selected: <strong>{{ selectedUnitName(idx) }}</strong>
+                </div>
+              </div>
+            </td>
 
-          <td class="p-2 border">
-            <input
-              type="number"
-              v-model.number="item.quantity"
-              @input="validateQuantity(item)"
-              class="w-full text-right border border-gray-300 rounded-lg p-2"
-            />
-          </td>
+            <!-- Last Purchase Price (Reference) -->
+            <td class="p-4 text-center font-medium text-gray-600">
+              {{ formatPrice(item.last_purchase_price || 0) }}
+            </td>
 
-          <td class="p-2 border text-right font-semibold">
-            {{ item.total_price.toLocaleString() }}
-          </td>
+            <!-- Editable Cost Price -->
+            <td class="p-4">
+              <input
+                type="number"
+                v-model.number="item.cost_price"
+                @input="calculateTotalFromPrice(idx)"
+                min="0"
+                step="100"
+                placeholder="0"
+                class="w-full text-right border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 font-semibold text-green-700"
+              />
+            </td>
 
-          <td class="p-2 border text-center">
-            <button
-              @click="removeRow(idx)"
-              class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
-            >
-              ✕
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <!-- Quantity -->
+            <td class="p-4">
+              <input
+                type="number"
+                v-model.number="item.quantity"
+                @input="calculateTotalFromPrice(idx)"
+                min="0"
+                step="0.01"
+                placeholder="0"
+                class="w-full text-center border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500"
+              />
+            </td>
 
-    <!-- Add Product + Totals -->
-    <div class="flex justify-between items-center mt-6">
-      <button
-        @click="addRow"
-        class="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600"
-      >
-        + Add Product
-      </button>
+            <!-- Editable Total -->
+            <td class="p-4">
+              <input
+                type="number"
+                v-model.number="item.total_price"
+                @input="calculatePriceFromTotal(idx)"
+                min="0"
+                step="100"
+                placeholder="0"
+                class="w-full text-right border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 font-bold text-indigo-700 text-lg"
+              />
+            </td>
 
-      <div class="text-xl font-bold">
-        Grand Total: <span class="text-indigo-600">{{ grandTotal.toLocaleString() }}</span>
+            <!-- Remove -->
+            <td class="p-4 text-center">
+              <button
+                @click="removeRow(idx)"
+                class="w-10 h-10 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition shadow"
+              >
+                ✕
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Add Row + Grand Total -->
+      <div class="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 flex justify-between items-center">
+        <button
+          @click="addRow"
+          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg transition transform hover:scale-105"
+        >
+          + Add Product
+        </button>
+
+        <div class="text-right">
+          <div class="text-2xl font-bold text-gray-800">
+            Grand Total: <span class="text-indigo-700">{{ formatPrice(grandTotal) }}</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Save -->
-    <div class="mt-6 text-right">
+    <!-- Save Button -->
+    <div class="text-right mb-8">
       <button
         @click="savePurchaseOrder"
-        class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+        :disabled="saving"
+        class="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-xl font-bold rounded-2xl shadow-2xl transition transform hover:scale-105 disabled:opacity-50"
       >
-        Save Purchase Order
+        {{ saving ? 'Saving...' : 'Save Purchase Order' }}
       </button>
     </div>
 
     <!-- Snackbar -->
-    <transition name="slide-fade">
-      <v-snackbar
-        v-if="snackbar.show"
-        v-model="snackbar.show"
-        :color="snackbar.color"
-        timeout="3000"
-        location="top-right"
-      >
-        {{ snackbar.message }}
-      </v-snackbar>
-    </transition>
+    <v-snackbar
+      v-model="snackbar.show"
+      :color="snackbar.color"
+      timeout="4000"
+      location="top right"
+    >
+      {{ snackbar.message }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -164,36 +249,38 @@ import { useRouter } from 'vue-router'
 import debounce from 'lodash.debounce'
 import api from '../api'
 
-// ----------------- Header -----------------
-const poHeader = ref({
-  supplier_id: '',
-  supplier_name: '',
-  invoice_number: '',
-  memo: '',
-  purchase_date: new Date().toISOString().slice(0, 10),
-})
-
-// ----------------- State -----------------
-const poItems = ref([])
-const suppliers = ref([])
-const selectedSupplierObj = ref(null)
-const errors = ref({})
-const loadingSuppliers = ref(false)
-
-// ----------------- Snackbar -----------------
 const router = useRouter()
-const snackbar = ref({
-  show: false,
-  message: '',
-  color: 'success',
+
+// Header
+const poHeader = ref({
+  supplier_id: null,
+  invoice_number: '',
+  purchase_date: new Date().toISOString().slice(0, 10),
+  memo: ''
 })
 
-// ----------------- Computed -----------------
-const grandTotal = computed(() =>
-  poItems.value.reduce((sum, item) => sum + (item.total_price || 0), 0)
-)
+// Items
+const poItems = ref([])
 
-// ----------------- Supplier Logic -----------------
+// Data
+const suppliers = ref([])
+const loadingSuppliers = ref(false)
+const saving = ref(false)
+const errors = ref({})
+const snackbar = ref({ show: false, message: '', color: 'success' })
+
+// Grand Total
+const grandTotal = computed(() => {
+  return poItems.value.reduce((sum, item) => sum + (item.total_price || 0), 0)
+})
+
+// Format Price
+const formatPrice = (val) => {
+  const value = Number(val) || 0
+  return new Intl.NumberFormat('en-UG', { minimumFractionDigits: 0 }).format(value)
+}
+
+// Fetch Suppliers
 const fetchSuppliers = async () => {
   loadingSuppliers.value = true
   try {
@@ -206,189 +293,192 @@ const fetchSuppliers = async () => {
   }
 }
 
-const selectSupplierById = (id) => {
-  const supplier = suppliers.value.find((s) => s.id === id)
-  if (supplier) {
-    selectedSupplierObj.value = supplier
-    poHeader.value.supplier_id = supplier.id
-    poHeader.value.supplier_name = supplier.name
-    errors.value.supplier = ''
-  } else {
-    selectedSupplierObj.value = null
-    poHeader.value.supplier_id = ''
-    poHeader.value.supplier_name = ''
-  }
-}
-
-// ----------------- Product Logic -----------------
+// Product Search
 const debouncedSearchProduct = debounce(async (query, idx) => {
-  if (!query?.trim()) {
-    poItems.value[idx].searchResults = []
+  const item = poItems.value[idx]
+  if (!query || query.trim().length < 2) {
+    item.searchResults = []
     return
   }
-  poItems.value[idx].loading = true
+  item.loading = true
   try {
-    const res = await api.get(`/inventory/products/search`, { params: { name: query } })
-    poItems.value[idx].searchResults = res.data.slice(0, 15).map((p) => ({
-      id: p.id,
-      name: `${p.name} — Stock: ${p.quantity ?? 0}`,
-      quantity: p.quantity ?? 0,
-      category_name: p.category_name ?? '',
-      price: p.price ?? 0,
-    }))
+    const res = await api.get('/inventory/products/search', { params: { name: query } })
+    item.searchResults = res.data
   } catch (err) {
     console.error(err)
   } finally {
-    poItems.value[idx].loading = false
+    item.loading = false
   }
-}, 400)
+}, 300)
 
-const onProductSearch = (val, idx) => {
-  debouncedSearchProduct(val, idx)
-}
-
-const onProductSelect = (id, idx) => {
-  const product = poItems.value[idx].searchResults.find((p) => p.id === id)
+// Select Product
+const selectProduct = (id, idx) => {
   const item = poItems.value[idx]
-  if (product) {
-    item.selectedProductObj = product
-    item.product_id = product.id
-    item.product_name = product.name
-    item.stock_qty = product.quantity
-    item.category_name = product.category_name
-    item.cost_price =  0
-    // cost_price: 0,
-
-    item.quantity = 0
-    item.total_price = 0
-  } else {
-    item.selectedProductObj = null
+  const product = item.searchResults.find(p => p.id === id)
+  if (!product) {
     item.product_id = null
     item.product_name = ''
-    item.stock_qty = 0
-    item.category_name = ''
+    item.units = []
+    item.unit_id = null
+    item.stock_in_unit = 0
     item.cost_price = 0
+    item.last_purchase_price = 0
     item.quantity = 0
     item.total_price = 0
+    return
+  }
+
+  item.product_id = product.id
+  item.selectedProductObj = product
+  item.product_name = product.name
+  item.units = product.units || []
+  item.unit_id = null
+  item.stock_base = product.quantity
+  item.stock_in_unit = product.quantity || 0
+  item.cost_price = 0
+  item.last_purchase_price = 0
+  item.quantity = 0
+  item.total_price = 0
+
+  item.searchResults = []
+}
+
+// Selected Unit Name (for display)
+const selectedUnitName = (idx) => {
+  const item = poItems.value[idx]
+  const unit = item.units.find(u => u.id === item.unit_id)
+  return unit ? unit.unit_name : null
+}
+
+// Update unit, stock, and last purchase price
+const updateUnitAndLastPrice = (idx) => {
+  const item = poItems.value[idx]
+  const selectedUnit = item.units.find(u => u.id === item.unit_id)
+  if (selectedUnit) {
+    // Stock in selected unit
+    item.stock_in_unit = item.stock_base / selectedUnit.conversion_quantity || 0
+
+    // Last purchase price (reference)
+    item.last_purchase_price = selectedUnit.last_purchase_price || selectedUnit.purchase_price || 0
+
+    // Optional: auto-fill cost price with last purchase price (uncomment if wanted)
+    // item.cost_price = item.last_purchase_price
+  } else {
+    item.stock_in_unit = 0
+    item.last_purchase_price = 0
+  }
+  calculateTotalFromPrice(idx)
+}
+
+// Calculate total from cost price × quantity
+const calculateTotalFromPrice = (idx) => {
+  const item = poItems.value[idx]
+  item.total_price = (item.quantity || 0) * (item.cost_price || 0)
+}
+
+// When total is entered, calculate cost price
+const calculatePriceFromTotal = (idx) => {
+  const item = poItems.value[idx]
+  if (item.quantity > 0 && item.total_price > 0) {
+    item.cost_price = item.total_price / item.quantity
   }
 }
 
-// ----------------- Rows -----------------
+// Add row
 const addRow = () => {
   poItems.value.push({
     product_id: null,
     product_name: '',
-    stock_qty: 0,
-    category_name: '',
+    units: [],
+    unit_id: null,
+    stock_base: 0,
+    stock_in_unit: 0,
     cost_price: 0,
+    last_purchase_price: 0,
     quantity: 0,
     total_price: 0,
     searchResults: [],
-    loading: false,
     selectedProductObj: null,
+    loading: false
   })
 }
 
+// Remove row
 const removeRow = (idx) => poItems.value.splice(idx, 1)
 
-const validateQuantity = (item) => {
-  if (item.quantity < 0) item.quantity = 0
-  calculateTotal(item)
-}
-
-const calculateTotal = (item) => {
-  item.total_price = (item.quantity || 0) * (item.cost_price || 0)
-}
-
-// ----------------- Save PO -----------------
+// Save PO
 const savePurchaseOrder = async () => {
   errors.value = {}
+
   if (!poHeader.value.supplier_id) {
-    errors.value.supplier = 'Select supplier'
+    errors.value.supplier = 'Select a supplier'
     return
   }
-  if (!poHeader.value.invoice_number) {
-    errors.value.invoice_number = 'Invoice required'
+  if (!poHeader.value.invoice_number.trim()) {
+    errors.value.invoice_number = 'Invoice number required'
     return
   }
 
-  for (const item of poItems.value) {
-    if (!item.product_id) return alert('Select product for all rows')
-    if (item.quantity <= 0)
-      return alert(`Quantity > 0 required for ${item.product_name}`)
+  const validItems = poItems.value.filter(i => i.product_id && i.unit_id && i.quantity > 0 && i.cost_price > 0)
+  if (validItems.length === 0) {
+    alert('Add at least one valid item with quantity and cost price')
+    return
   }
 
   const payload = {
     supplier_id: poHeader.value.supplier_id,
-    invoice_number: poHeader.value.invoice_number,
-    memo: poHeader.value.memo,
+    invoice_number: poHeader.value.invoice_number.trim(),
     purchase_date: poHeader.value.purchase_date,
-    items: poItems.value.map((i) => ({
+    memo: poHeader.value.memo || '',
+    items: validItems.map(i => ({
       product_id: i.product_id,
+      unit_id: i.unit_id,
       quantity: i.quantity,
-      cost_price: i.cost_price,
-    })),
+      unit_price: i.cost_price
+    }))
   }
 
+  saving.value = true
   try {
     const res = await api.post('/suppliers/orders', payload)
-
-    // Show snackbar
-    snackbar.value.message = res.data.message || `PO created successfully!`
-    snackbar.value.color = 'success'
-    snackbar.value.show = true
-
-    // Navigate after short delay
-    setTimeout(() => {
-      router.push(`/purchase-orders/${res.data.po_id}`)
-    }, 1000)
-
+    snackbar.value = {
+      show: true,
+      message: 'Purchase Order saved successfully!',
+      color: 'success'
+    }
     // Reset form
     poHeader.value = {
-      supplier_id: '',
-      supplier_name: '',
+      supplier_id: null,
       invoice_number: '',
-      memo: '',
       purchase_date: new Date().toISOString().slice(0, 10),
+      memo: ''
     }
-    selectedSupplierObj.value = null
     poItems.value = []
     addRow()
   } catch (err) {
-    snackbar.value.message = err.response?.data?.error || err.message
-    snackbar.value.color = 'error'
-    snackbar.value.show = true
+    snackbar.value = {
+      show: true,
+      message: err.response?.data?.error || 'Failed to save PO',
+      color: 'error'
+    }
+  } finally {
+    saving.value = false
   }
 }
 
-// ----------------- Lifecycle -----------------
+// Init
 onMounted(() => {
   fetchSuppliers()
   addRow()
 })
 </script>
 
-<style>
-.slide-fade-enter-active {
-  transition: all 0.5s ease;
+<style scoped>
+/* Optional: Enhance selected badges */
+.bg-green-50 {
+  background-color: #f0fdf4;
 }
-.slide-fade-leave-active {
-  transition: all 0.5s ease;
-}
-.slide-fade-enter-from {
-  transform: translateY(-20px);
-  opacity: 0;
-}
-.slide-fade-enter-to {
-  transform: translateY(0);
-  opacity: 1;
-}
-.slide-fade-leave-from {
-  transform: translateY(0);
-  opacity: 1;
-}
-.slide-fade-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
+.bg-indigo-50 {
+  background-color: #eef2ff;
 }
 </style>

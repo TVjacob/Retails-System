@@ -2,112 +2,133 @@
   <div class="p-6 max-w-7xl mx-auto bg-gray-50 min-h-screen">
     <h1 class="text-3xl font-bold mb-6 text-gray-800">Sales List</h1>
 
-    <!-- Filters + Search -->
-    <div class="flex flex-wrap gap-2 mb-6 items-center">
+    <!-- Tabs + Filters -->
+    <div class="flex flex-wrap gap-3 mb-6 items-center">
       <button
-        :class="currentTab === 'paid' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'"
-        class="px-4 py-2 rounded-lg font-medium transition hover:bg-indigo-500"
-        @click="currentTab = 'paid'; fetchSales()"
+        :class="currentTab === 'paid' ? activeTabClass : inactiveTabClass"
+        @click="currentTab = 'paid'"
       >
         Paid Sales
       </button>
       <button
-        :class="currentTab === 'unpaid' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'"
-        class="px-4 py-2 rounded-lg font-medium transition hover:bg-indigo-500"
-        @click="currentTab = 'unpaid'; fetchSales()"
+        :class="currentTab === 'unpaid' ? activeTabClass : inactiveTabClass"
+        @click="currentTab = 'unpaid'"
       >
         Unpaid Sales
       </button>
 
       <input
         v-model="searchQuery"
-        placeholder="🔍 Search by sale number or customer name"
-        class="ml-auto px-3 py-2 border rounded-lg w-64 focus:ring-2 focus:ring-indigo-400 focus:outline-none"
-        @input="fetchSales"
+        @input="debouncedFetchSales"
+        placeholder="🔍 Search sale #, customer, memo..."
+        class="flex-1 min-w-[240px] px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none"
       />
 
       <input
         type="date"
         v-model="startDate"
-        class="px-3 py-2 border rounded-lg"
-        @change="fetchSales"
+        @change="debouncedFetchSales"
+        class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none"
       />
       <input
         type="date"
         v-model="endDate"
-        class="px-3 py-2 border rounded-lg"
-        @change="fetchSales"
+        @change="debouncedFetchSales"
+        class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none"
       />
+
+      <button
+        @click="fetchSales"
+        class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow transition"
+      >
+        Refresh
+      </button>
     </div>
 
-    <!-- Sales Table -->
-    <div class="overflow-x-auto bg-white rounded-xl shadow-lg border">
+    <!-- Totals -->
+    <div class="mb-5 flex flex-wrap justify-end gap-6 font-semibold text-gray-800">
+      <div>Total Amount: <span class="text-indigo-700">{{ formatCurrency(totalAmount) }}</span></div>
+      <div>Total Paid: <span class="text-green-700">{{ formatCurrency(totalPaid) }}</span></div>
+      <div>Total Balance: <span class="text-red-700">{{ formatCurrency(totalBalance) }}</span></div>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white rounded-xl shadow border border-gray-200">
       <table class="min-w-full border-collapse">
-        <thead class="bg-gray-100 text-gray-700 sticky top-0">
+        <thead class="bg-gray-100 text-gray-700 sticky top-0 z-10">
           <tr>
-            <th class="p-3 border-b text-left">Sale ID</th>
-            <th class="p-3 border-b text-left">Sale Number</th>
-            <th class="p-3 border-b text-left">Customer</th>
-            <th class="p-3 border-b text-left">Sale Date</th>
-            <th class="p-3 border-b text-right">Total Amount</th>
-            <th class="p-3 border-b text-right">Paid</th>
-            <th class="p-3 border-b text-right">Balance</th>
-            <th class="p-3 border-b text-center">Status</th>
-            <th class="p-3 border-b text-center">Actions</th>
+            <th class="p-3 border-b text-left font-semibold">Sale ID</th>
+            <th class="p-3 border-b text-left font-semibold">Sale Number</th>
+            <th class="p-3 border-b text-left font-semibold">Memo</th>
+            <th class="p-3 border-b text-left font-semibold">Customer</th>
+            <th class="p-3 border-b text-left font-semibold">Sale Date</th>
+            <th class="p-3 border-b text-right font-semibold">Total</th>
+            <th class="p-3 border-b text-right font-semibold">Paid</th>
+            <th class="p-3 border-b text-right font-semibold">Balance</th>
+            <th class="p-3 border-b text-center font-semibold">Status</th>
+            <th class="p-3 border-b text-center font-semibold w-64">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr
-          v-for="sale in filteredSales"
+            v-for="sale in filteredSales"
             :key="sale.sale_id"
-            class="hover:bg-gray-50 transition cursor-pointer"
+            class="hover:bg-gray-50 transition-colors"
           >
-            <td class="p-2 border">{{ sale.sale_id }}</td>
-            <td class="p-2 border">{{ sale.sale_number }}</td>
-            <td class="p-2 border">{{ sale.customer_name }}</td>
-            <td class="p-2 border">{{ formatDate(sale.sale_date) }}</td>
-            <td class="p-2 border text-right">{{ formatCurrency(sale.total_amount) }}</td>
-            <td class="p-2 border text-right">{{ formatCurrency(sale.total_paid || 0) }}</td>
-            <td
-              class="p-2 border text-right font-semibold"
-              :class="sale.balance === 0 ? 'text-green-600' : 'text-red-600'"
-            >
+            <td class="p-3 border-b">{{ sale.sale_id }}</td>
+            <td class="p-3 border-b font-medium">{{ sale.sale_number }}</td>
+            <td class="p-3 border-b text-gray-600">{{ sale.memo || '—' }}</td>
+            <td class="p-3 border-b">{{ sale.customer_name || sale.customer?.name || '—' }}</td>
+            <td class="p-3 border-b">{{ formatDate(sale.sale_date) }}</td>
+            <td class="p-3 border-b text-right">{{ formatCurrency(sale.total_amount) }}</td>
+            <td class="p-3 border-b text-right">{{ formatCurrency(sale.total_paid || 0) }}</td>
+            <td class="p-3 border-b text-right font-semibold" :class="sale.balance <= 0 ? 'text-green-700' : 'text-red-700'">
               {{ formatCurrency(sale.balance) }}
             </td>
-            <td class="p-2 border text-center">
+            <td class="p-3 border-b text-center">
               <span
-                :class="sale.balance === 0
-                  ? 'bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm'
-                  : 'bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm'"
+                :class="sale.balance <= 0
+                  ? 'bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'
+                  : 'bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium'"
               >
-                {{ sale.balance === 0 ? 'Paid' : 'Unpaid' }}
+                {{ sale.balance <= 0 ? 'Paid' : 'Unpaid' }}
               </span>
             </td>
-            <td class="p-2 border text-center flex justify-center gap-2">
+            <td class="p-3 border-b text-center flex flex-wrap justify-center gap-2">
+              <router-link
+                :to="`/editsales/${sale.sale_id}`"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg text-sm transition flex items-center gap-1 shadow-sm"
+              >
+                ✏️ Edit
+              </router-link>
+
               <button
                 v-if="sale.balance > 0"
                 @click="openPaymentModal(sale)"
-                class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-lg transition"
+                class="bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 rounded-lg text-sm transition shadow-sm"
               >
-                Receive Payment
+                💰 Receive
               </button>
+
               <button
                 @click="previewPaymentReport(sale.sale_id)"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg transition"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg text-sm transition shadow-sm"
               >
-                View Report
+                🔍 Report
               </button>
+
               <button
-                @click="deleteSale(sale.sale_id)"
-                class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-lg transition"
+                @click="confirmDeleteSale(sale)"
+                class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded-lg text-sm transition shadow-sm"
               >
-                Delete
+                🗑️ Delete
               </button>
             </td>
           </tr>
-          <tr v-if="sales.length === 0">
-            <td colspan="9" class="p-4 text-center text-gray-500">
-              No sales found.
+
+          <tr v-if="filteredSales.length === 0">
+            <td colspan="10" class="p-12 text-center text-gray-500 italic">
+              No sales found matching your filters.
             </td>
           </tr>
         </tbody>
@@ -116,118 +137,148 @@
 
     <!-- Modals -->
     <PaymentModal
-      v-if="showPaymentModal"
+      v-model:modelValue="showPaymentModal"
       :sale="selectedSale"
       :accounts="accounts"
-      v-model:modelValue="showPaymentModal"
       @saved="fetchSales"
     />
 
     <ReportModal
-      v-if="showReportModal"
-      :report="paymentReport"
       v-model:show="showReportModal"
+      :report="paymentReport"
     />
+
+    <!-- Toast -->
+    <div
+      v-if="toast.visible"
+      class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in-up"
+    >
+      <span>{{ toast.message }}</span>
+    </div>
   </div>
 </template>
+
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import api from '../api';
-import PaymentModal from './PaymentModal.vue';
-import ReportModal from './ReportModal.vue';
+import { ref, computed, onMounted } from 'vue'
+import debounce from 'lodash.debounce'
+import api from '../api'
+import PaymentModal from './PaymentModal.vue'
+import ReportModal from './ReportModal.vue'
+import { useRouter } from 'vue-router'
 
-const currentTab = ref('unpaid');
-const sales = ref([]);
-const accounts = ref([]);
-const searchQuery = ref('');
-const startDate = ref('');
-const endDate = ref('');
+const router = useRouter()
 
-// Modals
-const showPaymentModal = ref(false);
-const selectedSale = ref(null);
-const showReportModal = ref(false);
-const paymentReport = ref(null);
+const currentTab = ref('unpaid')
+const sales = ref([])
+const accounts = ref([])
+const searchQuery = ref('')
+const startDate = ref(new Date().toISOString().split('T')[0])
+const endDate = ref(new Date().toISOString().split('T')[0])
 
-// Fetch sales with filters
+const showPaymentModal = ref(false)
+const selectedSale = ref(null)
+const showReportModal = ref(false)
+const paymentReport = ref(null)
+
+const toast = ref({ visible: false, message: '' })
+
+const showToast = (msg, duration = 3200) => {
+  toast.value = { visible: true, message: msg }
+  setTimeout(() => (toast.value.visible = false), duration)
+}
+
 const fetchSales = async () => {
   try {
     const params = {
-      search: searchQuery.value,
-      start_date: startDate.value,
-      end_date: endDate.value,
-    };
-    const res = await api.get('/sales/', { params });
-    sales.value = res.data.map(s => ({ ...s, balance: s.balance }));
+      search: searchQuery.value.trim() || undefined,
+      start_date: startDate.value || undefined,
+      end_date: endDate.value || undefined
+    }
+    const res = await api.get('/sales/', { params })
+    sales.value = res.data
   } catch (err) {
-    console.error(err);
+    console.error('Failed to load sales:', err)
+    showToast('❌ Error loading sales', 4000)
   }
-};
+}
 
-// Filtered sales for Paid / Unpaid tabs
-const filteredSales = computed(() => {
-  return sales.value
-    .filter(s => currentTab.value === 'paid' ? s.balance <= 0 : s.balance > 0)
-    .filter(s => {
-      const query = searchQuery.value.toLowerCase();
-      return (
-        s.sale_number.toLowerCase().includes(query) ||
-        (s.customer_name && s.customer_name.toLowerCase().includes(query))
-      );
-    });
-});
+const debouncedFetchSales = debounce(fetchSales, 420)
 
-// Fetch accounts
 const fetchAccounts = async () => {
   try {
-    const res = await api.get('/accounts/cash-bank');
-    accounts.value = res.data;
+    const res = await api.get('/accounts/cash-bank')
+    accounts.value = res.data
   } catch (err) {
-    console.error(err);
+    console.error(err)
   }
-};
+}
 
-// Delete sale
-const deleteSale = async (saleId) => {
-  if (!confirm('Are you sure you want to delete this sale? This action cannot be undone.')) return;
-  try {
-    await api.delete(`/sales/${saleId}`);
-    fetchSales();
-    alert('Sale deleted successfully.');
-  } catch (err) {
-    console.error('Delete failed:', err);
-    alert('Failed to delete sale. Please try again.');
-  }
-};
+const filteredSales = computed(() => {
+  return sales.value.filter(s =>
+    currentTab.value === 'paid' ? s.balance <= 0 : s.balance > 0
+  )
+})
 
-// Modals
+const totalAmount = computed(() =>
+  filteredSales.value.reduce((sum, s) => sum + Number(s.total_amount || 0), 0)
+)
+const totalPaid = computed(() =>
+  filteredSales.value.reduce((sum, s) => sum + Number(s.total_paid || 0), 0)
+)
+const totalBalance = computed(() =>
+  filteredSales.value.reduce((sum, s) => sum + Number(s.balance || 0), 0)
+)
+
+const formatDate = dateStr => dateStr ? new Date(dateStr).toLocaleDateString('en-GB') : '—'
+const formatCurrency = val =>
+  Number(val || 0).toLocaleString('en-UG', { style: 'currency', currency: 'UGX', minimumFractionDigits: 0 })
+
+const activeTabClass = 'px-5 py-2 rounded-lg bg-indigo-600 text-white font-medium shadow-sm transition hover:bg-indigo-700'
+const inactiveTabClass = 'px-5 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-medium transition hover:bg-gray-100'
+
 const openPaymentModal = sale => {
-  selectedSale.value = sale;
-  showPaymentModal.value = true;
-};
+  selectedSale.value = sale
+  showPaymentModal.value = true
+}
+
 const previewPaymentReport = async saleId => {
   try {
-    const res = await api.get(`/payments/details?sale_id=${saleId}&type=invoice`);
-    paymentReport.value = res.data;
-    showReportModal.value = true;
+    const res = await api.get(`/payments/details?sale_id=${saleId}&type=invoice`)
+    paymentReport.value = res.data
+    showReportModal.value = true
   } catch (err) {
-    console.error(err);
+    console.error(err)
+    showToast('❌ Could not load report', 4000)
   }
-};
+}
 
-// Helpers
-const formatDate = dateStr => new Date(dateStr).toLocaleDateString();
-const formatCurrency = val => Number(val).toLocaleString(undefined, { style: 'currency', currency: 'UGX' });
+const confirmDeleteSale = sale => {
+  if (!confirm(`Delete sale ${sale.sale_number || sale.sale_id}?\nThis will reverse inventory & accounting entries.`))
+    return
+
+  api.delete(`/sales/${sale.sale_id}/delete`)
+    .then(() => {
+      showToast(`✅ Sale ${sale.sale_number || sale.sale_id} deleted successfully`)
+      fetchSales()
+    })
+    .catch(err => {
+      console.error(err)
+      showToast(`❌ Delete failed: ${err.response?.data?.error || 'Server error'}`, 5000)
+    })
+}
 
 onMounted(() => {
-  fetchSales();
-  fetchAccounts();
-});
+  fetchSales()
+  fetchAccounts()
+})
 </script>
 
 <style scoped>
-.hover\:bg-gray-50:hover {
-  background-color: #f9fafb;
-  transition: background-color 0.2s;
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 </style>

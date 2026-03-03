@@ -2,9 +2,7 @@ import axios from 'axios';
 import router from '../router';
 
 const api = axios.create({
-// baseURL: import.meta.env.VITE_API_URL || '/api',
-baseURL: 'http://localhost:5200/api' || '/api',
-
+baseURL: 'http://127.0.0.1:5200/api'|| '/api',
   headers: { 'Content-Type': 'application/json' },
 });
 

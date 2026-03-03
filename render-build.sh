@@ -7,7 +7,7 @@ echo "Installing Python packages..."
 pip install -r requirements.txt gunicorn
 
 echo "Building Vue frontend..."
-cd sjhardware-frontend
+cd Kim Phones-frontend
 
 # Use Node version from package.json
 npm ci --only=production   # faster & cleaner
@@ -17,8 +17,8 @@ echo "Copying built Vue files to Flask static folder..."
 cd ..
 rm -rf static app/static
 mkdir -p static
-cp -r sjhardware-frontend/dist/* static/
+cp -r Kim Phones-frontend/dist/* static/
 
-echo "SJ Hardware frontend built and copied successfully!"
+echo "Kim Phones frontend built and copied successfully!"
 echo "Files in static/:"
 ls -la static/

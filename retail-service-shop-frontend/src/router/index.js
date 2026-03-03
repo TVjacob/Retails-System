@@ -39,6 +39,9 @@ import BalanceSheet from '@/pages/reports/BalanceSheet.vue';
 import UserProfile from '@/pages/UserProfile.vue';
 import PurchaseProduct from '@/pages/reports/PurchaseProduct.vue';
 import SalesProfit from '@/pages/reports/SalesProfit.vue';
+import StockAdjustments from '@/pages/StockAdjustments.vue';
+import EditSale from '@/pages/EditSale.vue';
+import CustomerPaymentsReport from '@/pages/reports/CustomerPaymentsReport.vue';
 
 const routes = [
   {
@@ -71,7 +74,14 @@ const routes = [
       { path: 'reports', component: Report, meta: { showGreeting: false, pageName: 'Reports',requiresAuth: true, } },
       
       { path: 'reports/purchased-products', component: PurchaseProduct, meta: { showGreeting: false, pageName: 'Purchased Product',requiresAuth: true, } },
+      { path: '/editsale', component: EditSale, meta: { showGreeting: false, pageName: 'EditSale',requiresAuth: true, } },
 
+      {
+        path: '/editsales/:id',
+        name: 'Edit Sale',
+        component: EditSale,
+        meta: { showGreeting: false, pageName: 'Edit Sale', requiresAuth: true,}
+      },
       // { path: 'reports/sales-profit', component: SalesProfit, meta: { showGreeting: false, pageName: 'Sales Profit',requiresAuth: true, } },
 
 
@@ -92,6 +102,14 @@ const routes = [
       { path: 'reports/stock-list', component: StockList, meta: { showGreeting: false, pageName: 'Stock List',requiresAuth: true, } },
       { path: 'reports/out-of-stock', component: OutOfStock, meta: { showGreeting: false, pageName: 'Out Of Stock',requiresAuth: true, } },
       { path: 'reports/sales-profit', component: SalesProfit, meta: { showGreeting: false, pageName: 'Sales Profit',requiresAuth: true, } },
+
+      { path: 'reports/customer-payments', component: CustomerPaymentsReport, meta: { showGreeting: false, pageName: 'Customer Payments',requiresAuth: true, } },
+      {
+        path:'/stockadjustments',
+        name:'StockAdjustments',
+        component: StockAdjustments,
+        meta: { showGreeting: false, pageName: 'Stock Adjustments', requiresAuth: true,}
+      },
       {
         path: '/purchase-orders/:id',
         name: 'PurchaseOrderDetails',
