@@ -261,17 +261,68 @@ def create_default_admin():
         print("Default admin created → username: admin | password: 123456")
 
 def rebuild_product_quantities():
-    with app.app_context():
+    try:
         sql = text("""
-            WITH pur AS (SELECT product_id, SUM(quantity) AS qty FROM purchase_order_item WHERE status != 9 GROUP BY product_id),
-                 sal AS (SELECT product_id, SUM(quantity) AS qty FROM sale_item WHERE status != 9 GROUP BY product_id)
-            UPDATE product p SET quantity = COALESCE(pur.qty,0) - COALESCE(sal.qty,0)
-            FROM pur FULL JOIN sal USING (product_id)
-            WHERE p.id = COALESCE(pur.product_id, sal.product_id);
+        WITH purchase_totals AS (
+            SELECT 
+                poi.product_id,
+                COALESCE(SUM(poi.quantity * COALESCE(pu.conversion_quantity, 1.0)), 0) AS total_purchased_base
+            FROM purchase_order_item poi
+            LEFT JOIN product_unit pu ON poi.unit_id = pu.id
+            WHERE poi.status != 9
+            GROUP BY poi.product_id
+        ),
+        sale_totals AS (
+            SELECT 
+                si.product_id,
+                COALESCE(SUM(si.quantity * COALESCE(pu.conversion_quantity, 1.0)), 0) AS total_sold_base
+            FROM sale_item si
+            LEFT JOIN product_unit pu ON si.unit_id = pu.id
+            WHERE si.status != 9
+            GROUP BY si.product_id
+        ),
+        adjustment_totals AS (
+            SELECT
+                sa.product_id,
+                COALESCE(SUM(
+                    CASE
+                        WHEN UPPER(sa.adjustment_type) = 'INCREASE'
+                            THEN sa.quantity * COALESCE(pu.conversion_quantity, 1.0)
+                        WHEN UPPER(sa.adjustment_type) = 'DECREASE'
+                            THEN -1 * sa.quantity * COALESCE(pu.conversion_quantity, 1.0)
+                        ELSE 0
+                    END
+                ), 0) AS total_adjusted_base
+            FROM stock_adjustment sa
+            LEFT JOIN product_unit pu ON sa.unit_id = pu.id
+            WHERE sa.status != 9
+            GROUP BY sa.product_id
+        )
+
+        UPDATE product p
+        SET quantity =
+            COALESCE(pur.total_purchased_base, 0)
+          - COALESCE(sal.total_sold_base, 0)
+          + COALESCE(adj.total_adjusted_base, 0)
+
+        FROM purchase_totals pur
+        FULL JOIN sale_totals sal 
+            ON pur.product_id = sal.product_id
+        FULL JOIN adjustment_totals adj
+            ON COALESCE(pur.product_id, sal.product_id) = adj.product_id
+
+        WHERE p.id = COALESCE(pur.product_id, sal.product_id, adj.product_id);
         """)
+
         db.session.execute(sql)
         db.session.commit()
-        print("Product quantities rebuilt")
+        print("✅ Product quantities rebuilt successfully (including stock adjustments).")
+
+    except Exception as e:
+        db.session.rollback()
+        print(f"❌ Failed to rebuild product quantities: {e}")
+
+
 
 def repair_inventory():
     with app.app_context():
