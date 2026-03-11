@@ -140,6 +140,14 @@
                   <td class="px-6 py-4 text-sm text-right font-medium text-gray-900">{{ formatCurrency(row.total_price) }}</td>
                   <td class="px-6 py-4 text-center">
                     <router-link
+                      :to="`/purchase-orders/${row.purchase_id}/edit`"
+                      class="inline-flex items-center px-3 py-1.5 bg-yellow-500 text-white text-sm rounded-md hover:bg-indigo-700 transition"
+                      title="Edit"
+                    >
+                      Edit
+                    </router-link>
+                
+                    <router-link
                       :to="`/purchase-orders/${row.purchase_id}`"
                       class="inline-flex items-center px-3 py-1.5 bg-indigo-600 text-white text-sm rounded-md hover:bg-indigo-700 transition"
                     >

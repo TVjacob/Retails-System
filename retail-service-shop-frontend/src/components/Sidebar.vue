@@ -6,16 +6,38 @@
       isMobile ? (collapsed ? '-translate-x-full fixed z-40 h-full' : 'translate-x-0 fixed z-40 h-full') : 'static'
     ]"
   >
-    <!-- Logo -->
+    <!-- Logo
     <div class="p-6 font-bold text-xl border-b border-gray-700 flex justify-between items-center">
-      <span v-if="!collapsed">Kim Phones</span>
+      <span v-if="!collapsed">Power City Electrical Services</span>
       <button @click="toggleSidebar" class="focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-    </div>
+    </div> -->
+<!-- Logo -->
+<div class="p-4 border-b border-gray-700 flex items-center justify-between">
+  <div class="flex items-center gap-3">
+    <!-- Logo Image -->
+    <img
+      src="/power.jpeg"
+      alt="Power City Logo"
+      class="w-8 h-8 object-contain"
+    />
 
+    <!-- Company Name -->
+    <span v-if="!collapsed" class="font-bold text-sm leading-tight">
+      Power City Electrical Services
+    </span>
+  </div>
+
+  <!-- Toggle Button -->
+  <button @click="toggleSidebar" class="focus:outline-none ml-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
     <!-- Menu -->
     <nav class="flex-1 mt-4 overflow-y-auto">
       <ul>

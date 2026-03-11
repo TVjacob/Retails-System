@@ -26,7 +26,7 @@ app = create_app()
 # ==================== SINGLE HEALTH CHECK (ONLY ONE!) ====================
 @app.route("/api/health")
 def health():
-    return {"status": "ok", "message": "Kim Phones is LIVE and running!"}
+    return {"status": "ok", "message": "Power City Electrical Services is LIVE and running!"}
 
 # ==================== CHART OF ACCOUNTS & PERMISSIONS DATA ====================
 account_updates = [
@@ -362,7 +362,7 @@ if __name__ == "__main__":
         from app.utils.gl_utils import generate_transaction_number, post_to_ledger
         create_default_piece_unit_for_products()
         repair_inventory()
-        update_all_accounts()
+        # update_all_accounts()
         normalize_account_type_enum_uppercase()
         seed_permissions()
         create_default_admin()

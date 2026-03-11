@@ -2115,7 +2115,7 @@ def purchase_report():
         .join(Product, Product.id == PurchaseOrderItem.product_id)
         .outerjoin(Category, Category.id == Product.category_id)
         .outerjoin(Supplier, Supplier.id == PurchaseOrder.supplier_id)
-        .filter(PurchaseOrder.status != 9)
+        .filter(PurchaseOrder.status != 9, PurchaseOrderItem.status != 9)
     )
 
     # Search filter ───────────────────────────────────────────────────

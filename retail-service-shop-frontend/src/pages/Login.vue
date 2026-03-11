@@ -4,13 +4,22 @@
     <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
       <!-- Header with Logo & Title -->
       <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-8 text-center">
-        <div class="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+        <!-- <div class="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
           <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
               d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
           </svg>
-        </div>
-        <h1 class="text-3xl font-bold text-white">Kim Phones</h1>
+        </div> -->
+        <div class="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+  <img 
+    src="/power.jpeg" 
+    alt="Power City Electrical Services Logo"
+    class="w-full h-full object-contain p-2"
+  />
+</div>
+
+
+        <h1 class="text-3xl font-bold text-white">Power City Electrical Services</h1>
         <p class="text-indigo-100 mt-2 text-lg">Retail Management System</p>
       </div>
 
@@ -101,7 +110,7 @@
 
         <!-- Footer -->
         <div class="mt-8 text-center text-sm text-gray-500">
-          <p>© 2025 Kim Phones • All rights reserved</p>
+          <p>© 2025 Power City Electrical Services • All rights reserved</p>
           <p class="mt-2">Powered by <span class="font-semibold text-indigo-600">Retail Pro System</span></p>
         </div>
       </div>
