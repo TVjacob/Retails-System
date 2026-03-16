@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
       <h1 class="text-3xl font-bold text-gray-900">Purchase History Report</h1>
-      
+
       <button
         @click="clearFilters"
         class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition"
@@ -94,6 +94,8 @@
               <tr>
                 <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PO ID</th>
                 <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unit</th>
+
                 <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                 <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Supplier</th>
                 <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Invoice</th>
@@ -131,6 +133,8 @@
                 >
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ row.purchase_id }}</td>
                   <td class="px-6 py-4 text-sm text-gray-900">{{ row.product }}</td>
+                  <td class="px-6 py-4 text-sm text-gray-900">{{ row.unit_name }}</td>
+
                   <td class="px-6 py-4 text-sm text-gray-600">{{ row.category || '—' }}</td>
                   <td class="px-6 py-4 text-sm text-gray-900">{{ row.supplier }}</td>
                   <td class="px-6 py-4 text-sm text-gray-900">{{ row.invoice_number }}</td>
@@ -146,7 +150,7 @@
                     >
                       Edit
                     </router-link>
-                
+
                     <router-link
                       :to="`/purchase-orders/${row.purchase_id}`"
                       class="inline-flex items-center px-3 py-1.5 bg-indigo-600 text-white text-sm rounded-md hover:bg-indigo-700 transition"
