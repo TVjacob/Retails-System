@@ -1,200 +1,267 @@
 <template>
-  <div class="p-6 max-w-7xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800 animate-fadeIn">Expenses Management</h1>
-
-    <!-- Add Expense Button -->
-    <button
-      @click="showModal = true"
-      class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded shadow transition transform hover:scale-105 mb-4"
-    >
-      + Add Expense
-    </button>
-
-    <!-- Grand Total -->
-    <div class="mb-4 p-4 bg-gray-100 rounded shadow hover:shadow-lg transition transform hover:scale-[1.01]">
-      <h2 class="text-lg font-bold">
-        Grand Total Paid: <span class="text-green-600">{{ formatCurrency(grandTotal) }}</span>
-      </h2>
+  <div class="p-6 max-w-7xl mx-auto space-y-8 bg-gray-50 dark:bg-gray-950 min-h-screen">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">
+        Expenses Management
+      </h1>
+      <button
+        @click="showModal = true"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg shadow-md transition transform hover:scale-105 flex items-center gap-2 font-medium"
+      >
+        <span>+</span> Add Expense
+      </button>
     </div>
 
-    <!-- Search + Date Filter + Export -->
-    <div class="mb-6 flex flex-wrap items-end gap-3">
-      <!-- Search -->
-      <div class="flex-1 min-w-[220px]">
-        <label class="block text-sm font-medium text-gray-700 mb-1">Search</label>
-        <input
-          v-model="searchQuery"
-          placeholder="Description, reference, item name..."
-          class="border p-2 rounded w-full shadow-sm focus:ring-2 focus:ring-indigo-400 transition"
-        />
+    <!-- Grand Total Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow border border-gray-200 dark:border-gray-700 p-6">
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg font-semibold text-black">
+          Total Expenses Recorded
+        </h2>
+        <p class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+          {{ formatCurrency(grandTotal) }}
+        </p>
       </div>
+    </div>
 
-      <!-- From Date -->
-      <div class="min-w-[180px]">
-        <label class="block text-sm font-medium text-gray-700 mb-1">From Date</label>
-        <input
-          v-model="dateRange.start"
-          type="date"
-          class="border p-2 rounded w-full shadow-sm focus:ring-2 focus:ring-indigo-400 transition"
-        />
-      </div>
+    <!-- Filters & Actions -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow border border-gray-200 dark:border-gray-700 p-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-5">
+        <!-- Search -->
+        <div>
+          <label class="block text-sm font-medium text-black mb-1.5">Search</label>
+          <input
+            v-model="searchQuery"
+            placeholder="Description, item, reference..."
+            class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg
+                   bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100
+                   focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+          />
+        </div>
 
-      <!-- To Date -->
-      <div class="min-w-[180px]">
-        <label class="block text-sm font-medium text-gray-700 mb-1">To Date</label>
-        <input
-          v-model="dateRange.end"
-          type="date"
-          class="border p-2 rounded w-full shadow-sm focus:ring-2 focus:ring-indigo-400 transition"
-        />
-      </div>
+        <!-- From Date -->
+        <div>
+          <label class="block text-sm font-medium text-black mb-1.5">From Date</label>
+          <input
+            v-model="dateRange.start"
+            type="date"
+            class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg
+                   bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100
+                   focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+          />
+        </div>
 
-      <!-- Action Buttons -->
-      <div class="flex gap-2 flex-wrap">
-        <button
-          @click="applyFilters"
-          class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded shadow transition transform hover:scale-105"
-        >
-          Filter
-        </button>
+        <!-- To Date -->
+        <div>
+          <label class="block text-sm font-medium text-black mb-1.5">To Date</label>
+          <input
+            v-model="dateRange.end"
+            type="date"
+            class="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg
+                   bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100
+                   focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+          />
+        </div>
 
-        <button
-          @click="resetFilters"
-          class="bg-gray-500 hover:bg-gray-600 text-white px-5 py-2 rounded shadow transition transform hover:scale-105"
-        >
-          Reset
-        </button>
+        <!-- Buttons -->
+        <div class="flex items-end gap-3 flex-wrap">
+          <button
+            @click="applyFilters"
+            class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-lg shadow transition transform hover:scale-105 font-medium"
+          >
+            Apply Filter
+          </button>
+          <button
+            @click="resetFilters"
+            class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2.5 rounded-lg shadow transition transform hover:scale-105 font-medium"
+          >
+            Reset
+          </button>
+        </div>
 
-        <button
-          @click="exportExcel"
-          class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded shadow transition transform hover:scale-105"
-        >
-          Excel
-        </button>
-
-        <button
-          @click="exportPDF"
-          class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded shadow transition transform hover:scale-105"
-        >
-          PDF
-        </button>
-
-        <button
-          @click="showItemModal = true"
-          class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded shadow transition transform hover:scale-105"
-        >
-          + New Item
-        </button>
+        <div class="flex items-end gap-3 flex-wrap">
+          <button
+            @click="exportExcel"
+            class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-lg shadow transition transform hover:scale-105 font-medium"
+          >
+            Export Excel
+          </button>
+          <button
+            @click="exportPDF"
+            class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-lg shadow transition transform hover:scale-105 font-medium"
+          >
+            Export PDF
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- Expenses Table -->
-    <div class="overflow-x-auto border rounded-lg shadow-lg">
-      <table class="min-w-full border-collapse">
-        <thead class="bg-gray-100">
+    <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-2xl shadow border border-gray-200 dark:border-gray-700">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900/60 sticky top-0 z-10">
           <tr>
-            <th class="p-3 border-b text-center"></th>
-            <th class="p-3 border-b text-left">ID</th>
-            <th class="p-3 border-b text-left">Description</th>
-            <th class="p-3 border-b text-right">Total Amount</th>
-            <th class="p-3 border-b text-left">Reference</th>
-            <th class="p-3 border-b text-left">Expense Date</th>
-            <th class="p-3 border-b text-left">Transaction No</th>
-            <th class="p-3 border-b text-center">Actions</th>
+            <th class="w-12 p-4 text-center"></th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">ID</th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Description</th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider min-w-[300px]">Narration</th>
+            <th class="p-4 text-right text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Total</th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Reference</th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Date</th>
+            <th class="p-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Trans. #</th>
+            <th class="p-4 text-center text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <template v-for="(expense, index) in expenses" :key="expense.id">
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          <template v-for="expense in filteredExpenses" :key="expense.id">
+            <!-- Main Row -->
             <tr
-              class="transition-all duration-300 hover:bg-gray-50 hover:shadow-sm cursor-pointer transform hover:scale-[1.01]"
+              class="hover:bg-indigo-50/40 dark:hover:bg-gray-800/50 transition-colors cursor-pointer"
+              @click="toggleExpand(expense.id)"
             >
-              <td class="p-3 text-center">
-                <button @click="toggleExpand(expense.id)" class="text-blue-600 font-bold transition transform hover:scale-110">
+              <td class="p-4 text-center">
+                <span class="text-indigo-600 dark:text-indigo-400 font-bold text-lg">
                   {{ expandedRows.includes(expense.id) ? '−' : '+' }}
-                </button>
+                </span>
               </td>
-              <td class="p-3">{{ expense.id }}</td>
-              <td class="p-3">{{ expense.description }}</td>
-              <td class="p-3 text-right">{{ formatCurrency(expense.total_amount) }}</td>
-              <td class="p-3">{{ expense.reference }}</td>
-              <td class="p-3">{{ expense.expense_date }}</td>
-              <td class="p-3">{{ expense.transaction_no }}</td>
-              <td class="p-3 text-center flex flex-wrap gap-1 justify-center">
-                <button @click="editExpense(expense)" class="bg-blue-400 hover:bg-blue-500 text-white px-2 py-1 rounded shadow transition transform hover:scale-105">Edit</button>
-                <button @click="deleteExpense(expense.id)" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded shadow transition transform hover:scale-105">Delete</button>
-                <router-link :to="`/reports/expenses/${expense.id}`" class="text-indigo-600 underline hover:text-indigo-800 transition">
-                  View
-                </router-link>
+              <td class="p-4 text-black font-medium">{{ expense.id }}</td>
+              <td class="p-4 text-black font-medium">{{ expense.description }}</td>
+
+              <td
+                class="p-4 text-black text-sm max-w-md group relative line-clamp-3 hover:line-clamp-none transition-all duration-200"
+                :title="getFullNarration(expense.items)"
+              >
+                <div v-if="expense.items?.length > 0">
+                  <div v-if="expense.items.length === 1" class="line-clamp-3">
+                    {{ expense.items[0].description || '—' }}
+                  </div>
+                  <div v-else class="italic text-black line-clamp-3">
+                    {{ expense.items[0]?.description || 'Multiple narrations' }}
+                    <span class="text-xs text-black">
+                      (+{{ expense.items.length - 1 }} more)
+                    </span>
+                  </div>
+                </div>
+                <span v-else class="text-black italic">No narration provided</span>
+
+                <div v-if="expense.items?.length > 0 && expense.items.some(i => i.description?.length > 80)"
+                     class="absolute hidden group-hover:block z-20 bg-gray-900 text-white text-sm rounded p-3 shadow-xl w-96 -mt-2 left-0 top-full border border-gray-700">
+                  <div class="space-y-2">
+                    <div v-for="(item, idx) in expense.items" :key="idx" class="border-b border-gray-700 pb-2 last:border-0">
+                      <p class="font-medium">{{ item.item_name }}</p>
+                      <p class="text-gray-300">{{ item.description || '—' }}</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td class="p-4 text-right font-semibold text-emerald-700 dark:text-emerald-400">
+                {{ formatCurrency(expense.total_amount) }}
+              </td>
+              <td class="p-4 text-black">{{ expense.reference || '—' }}</td>
+              <td class="p-4 text-black">{{ expense.expense_date }}</td>
+              <td class="p-4 text-black">{{ expense.transaction_no || '—' }}</td>
+              <td class="p-4 text-center">
+                <div class="flex justify-center gap-2 flex-wrap">
+                  <button
+                    @click.stop="editExpense(expense)"
+                    class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-3 py-1.5 rounded shadow-sm transition"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    @click.stop="deleteExpense(expense.id)"
+                    class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-1.5 rounded shadow-sm transition"
+                  >
+                    Delete
+                  </button>
+                  <router-link
+                    :to="`/reports/expenses/${expense.id}`"
+                    class="text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 text-xs font-medium px-3 py-1.5 transition"
+                  >
+                    View
+                  </router-link>
+                </div>
               </td>
             </tr>
 
-            <!-- Expanded row -->
-            <tr v-show="expandedRows.includes(expense.id)">
-              <td colspan="8" class="p-0">
-                <div class="p-4 bg-gray-50 border-t shadow-inner">
-                  <h3 class="font-semibold mb-2">Expense Items</h3>
-                  <table class="w-full border text-sm">
-                    <thead>
-                      <tr>
-                        <th class="p-2 border">Account</th>
-                        <th class="p-2 border">Item Name</th>
-                        <th class="p-2 border">Description</th>
-                        <th class="p-2 border">Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="item in expense.items" :key="`item-${item.id}`" class="hover:bg-gray-100 transition">
-                        <td class="p-2 border">{{ getAccountName(item.account_id) }}</td>
-                        <td class="p-2 border">{{ item.item_name }}</td>
-                        <td class="p-2 border">{{ item.description }}</td>
-                        <td class="p-2 border text-right">{{ formatCurrency(item.amount) }}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <!-- Expanded Row -->
+            <tr v-if="expandedRows.includes(expense.id)">
+              <td colspan="9" class="p-0">
+                <div class="p-6 bg-gray-50 dark:bg-gray-900/40 border-t border-gray-200 dark:border-gray-700">
+                  <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                    <span>Expense Breakdown</span>
+                    <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                      ({{ expense.items.length }} item{{ expense.items.length !== 1 ? 's' : '' }})
+                    </span>
+                  </h4>
+
+                  <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
+                    <table class="min-w-full text-sm">
+                      <thead class="bg-gray-100 dark:bg-gray-800/60">
+                        <tr>
+                          <th class="p-3 text-left font-medium text-gray-700 dark:text-gray-300">Account</th>
+                          <th class="p-3 text-left font-medium text-gray-700 dark:text-gray-300">Item Name</th>
+                          <th class="p-3 text-left font-medium text-gray-700 dark:text-gray-300">Narration</th>
+                          <th class="p-3 text-right font-medium text-gray-700 dark:text-gray-300">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <tr v-for="item in expense.items" :key="item.id" class="hover:bg-white dark:hover:bg-gray-800/40 transition">
+                          <td class="p-3 text-gray-900 dark:text-gray-200">{{ getAccountName(item.account_id) }}</td>
+                          <td class="p-3 text-gray-900 dark:text-gray-200">{{ item.item_name }}</td>
+                          <td class="p-3 text-gray-800 dark:text-gray-300">{{ item.description || '—' }}</td>
+                          <td class="p-3 text-right font-medium text-emerald-700 dark:text-emerald-400">
+                            {{ formatCurrency(item.amount) }}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </td>
             </tr>
           </template>
 
-          <!-- No data message -->
-          <tr v-if="expenses.length === 0">
-            <td colspan="8" class="p-8 text-center text-gray-500">
-              No expenses found for the selected period / search.
+          <tr v-if="filteredExpenses.length === 0">
+            <td colspan="9" class="p-16 text-center text-gray-500 dark:text-gray-400 text-lg">
+              No expenses found in the selected period.<br />
+              <span class="text-sm mt-2 block">Try adjusting your filters or add a new expense.</span>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <!-- Pagination Controls -->
-    <div v-if="pagination.total > 0" class="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-      <div class="text-gray-700">
+    <!-- Pagination -->
+    <div v-if="pagination.total > 0" class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-gray-700 dark:text-gray-300">
+      <div>
         Showing
         <span class="font-medium">{{ (pagination.current_page - 1) * pagination.per_page + 1 }}</span>
         to
         <span class="font-medium">{{ Math.min(pagination.current_page * pagination.per_page, pagination.total) }}</span>
         of
-        <span class="font-medium">{{ pagination.total }}</span>
-        results
+        <span class="font-medium">{{ pagination.total }}</span> expenses
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-4">
         <button
           @click="changePage(pagination.current_page - 1)"
           :disabled="!pagination.has_prev"
-          class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          class="px-5 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 transition font-medium"
         >
           Previous
         </button>
 
-        <span class="px-4 py-2 font-medium text-gray-800">
-          Page {{ pagination.current_page }} of {{ pagination.pages }}
+        <span class="font-medium">
+          Page {{ pagination.current_page }} / {{ pagination.pages }}
         </span>
 
         <button
           @click="changePage(pagination.current_page + 1)"
           :disabled="!pagination.has_next"
-          class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          class="px-5 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 transition font-medium"
         >
           Next
         </button>
@@ -202,7 +269,7 @@
         <select
           v-model="perPage"
           @change="applyFilters"
-          class="border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+          class="border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
         >
           <option :value="10">10 per page</option>
           <option :value="20">20 per page</option>
@@ -212,7 +279,7 @@
       </div>
     </div>
 
-    <!-- Add/Edit Expense Modal -->
+    <!-- Add/Edit Modal (unchanged – keeping your original structure) -->
     <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 animate-fadeInModal">
       <div class="bg-white rounded-lg p-6 w-full max-w-[806px] relative shadow-xl transform transition-all scale-95 animate-scaleUp">
         <h2 class="text-xl font-bold mb-4">{{ editingExpense ? 'Edit Expense' : 'Add Expense' }}</h2>
@@ -221,11 +288,11 @@
         <div class="grid grid-cols-2 gap-4 mb-4">
           <input v-model="expenseForm.description" placeholder="Expense Description" class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition" />
           <input v-model="expenseForm.reference" placeholder="Reference" class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition" />
-          <input 
-            list="paymentAccounts" 
-            v-model="expenseForm.payment_account_name" 
-            placeholder="Payment Account (Cash/Bank)" 
-            class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition" 
+          <input
+            list="paymentAccounts"
+            v-model="expenseForm.payment_account_name"
+            placeholder="Payment Account (Cash/Bank)"
+            class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition"
             @focus="fetchCashBankAccounts('')"
           />
           <datalist id="paymentAccounts">
@@ -236,11 +303,11 @@
 
         <h3 class="font-bold mb-2">Expense Items</h3>
         <div v-for="(item, index) in expenseForm.items" :key="`item-${index}`" class="grid grid-cols-5 gap-2 mb-2">
-          <input 
-            list="expenseAccounts" 
-            v-model="item.account_name" 
-            placeholder="Select Expense Account" 
-            class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition" 
+          <input
+            list="expenseAccounts"
+            v-model="item.account_name"
+            placeholder="Select Expense Account"
+            class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition"
             @focus="fetchExpenseAccounts('')"
           />
           <datalist id="expenseAccounts">
@@ -267,7 +334,7 @@
       </div>
     </div>
 
-    <!-- Add Expense Item Modal -->
+    <!-- Add Expense Item Modal (if you still use it) -->
     <div v-if="showItemModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 animate-fadeInModal">
       <div class="bg-white rounded-lg p-6 w-full max-w-md relative shadow-xl transform transition-all scale-95 animate-scaleUp">
         <h2 class="text-xl font-bold mb-4">Add Expense Item</h2>
@@ -275,7 +342,6 @@
 
         <div class="grid gap-4 mb-4">
           <input v-model="expenseItemForm.name" placeholder="Expense Item Name" class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition" />
-
           <select v-model="expenseItemForm.account_subtype" class="border p-2 rounded shadow-sm focus:ring-2 focus:ring-indigo-400 transition">
             <option value="" disabled>Select Expense Type</option>
             <option v-for="acc in expenseSubtypes" :key="acc" :value="acc">{{ acc }}</option>
@@ -299,6 +365,7 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 
 export default {
+  name: 'ExpenseManagement',
   data() {
     const today = new Date().toISOString().split("T")[0];
     const oneMonthAgo = new Date();
@@ -306,7 +373,8 @@ export default {
     const defaultStart = oneMonthAgo.toISOString().split("T")[0];
 
     return {
-      expenses: [],
+      filteredExpenses: [],
+      grandTotal: 0,
       searchQuery: "",
       dateRange: {
         start: defaultStart,
@@ -345,9 +413,6 @@ export default {
   },
 
   computed: {
-    grandTotal() {
-      return this.expenses.reduce((sum, expense) => sum + Number(expense.total_amount || 0), 0);
-    },
     amountPaid() {
       return this.expenseForm.items.reduce((total, item) => total + Number(item.amount || 0), 0);
     },
@@ -355,18 +420,23 @@ export default {
 
   methods: {
     formatCurrency(value) {
-      if (!value && value !== 0) return "UGX 0";
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'UGX',
+      if (value == null) return "UGX 0";
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "UGX",
         minimumFractionDigits: 0,
-        maximumFractionDigits: 0
+        maximumFractionDigits: 0,
       }).format(value);
+    },
+
+    getFullNarration(items) {
+      if (!items?.length) return "";
+      return items.map(i => i.description || "—").join("\n\n");
     },
 
     getAccountName(accountId) {
       const acc = this.expenseAccounts.find(a => a.id === accountId);
-      return acc ? acc.name : "Unknown Account";
+      return acc ? acc.name : "Unknown";
     },
 
     async fetchCashBankAccounts(search = "") {
@@ -410,53 +480,27 @@ export default {
     },
 
     validateExpense() {
-      if (!this.expenseForm.description.trim()) {
-        alert("Expense description is required.");
-        return false;
-      }
-      if (!this.expenseForm.payment_account_id) {
-        alert("Please select a valid payment account.");
-        return false;
-      }
-      if (!this.expenseForm.expense_date) {
-        alert("Expense date is required.");
-        return false;
-      }
-      if (this.expenseForm.items.length === 0) {
-        alert("At least one expense item is required.");
-        return false;
-      }
+      if (!this.expenseForm.description.trim()) return alert("Expense description is required."), false;
+      if (!this.expenseForm.payment_account_id) return alert("Please select a valid payment account."), false;
+      if (!this.expenseForm.expense_date) return alert("Expense date is required."), false;
+      if (this.expenseForm.items.length === 0) return alert("At least one expense item is required."), false;
+
       for (const [i, item] of this.expenseForm.items.entries()) {
-        if (!item.account_id) {
-          alert(`Item ${i + 1}: Valid expense account is required.`);
-          return false;
-        }
-        if (!item.item_name.trim()) {
-          alert(`Item ${i + 1}: Item name is required.`);
-          return false;
-        }
-        if (!item.amount || item.amount <= 0) {
-          alert(`Item ${i + 1}: Amount must be greater than 0.`);
-          return false;
-        }
+        if (!item.account_id) return alert(`Item ${i + 1}: Valid expense account is required.`), false;
+        if (!item.item_name.trim()) return alert(`Item ${i + 1}: Item name is required.`), false;
+        if (!item.amount || item.amount <= 0) return alert(`Item ${i + 1}: Amount must be greater than 0.`), false;
       }
       return true;
     },
 
     async submitExpense() {
       const paymentAcc = this.cashBankAccounts.find(a => a.name === this.expenseForm.payment_account_name);
-      if (!paymentAcc) {
-        alert("Please select a valid Cash/Bank account!");
-        return;
-      }
+      if (!paymentAcc) return alert("Please select a valid Cash/Bank account!"), false;
       this.expenseForm.payment_account_id = paymentAcc.id;
 
       for (const item of this.expenseForm.items) {
         const acc = this.expenseAccounts.find(a => a.name === item.account_name);
-        if (!acc) {
-          alert(`Invalid expense account for item "${item.item_name}"`);
-          return;
-        }
+        if (!acc) return alert(`Invalid expense account for item "${item.item_name}"`), false;
         item.account_id = acc.id;
       }
 
@@ -473,31 +517,27 @@ export default {
         this.closeModal();
         this.fetchExpenses();
       } catch (err) {
-        console.error("❌ Error submitting expense:", err);
+        console.error("Error submitting expense:", err);
         alert("Failed to submit expense. " + (err.response?.data?.error || err.message));
       }
     },
 
     async submitExpenseItem() {
       if (!this.expenseItemForm.name.trim() || !this.expenseItemForm.account_subtype) {
-        alert("Expense Item Name and Type are required!");
-        return;
+        return alert("Expense Item Name and Type are required!");
       }
 
       try {
-        const payload = {
+        await api.post("/accounts/expense-items", {
           name: this.expenseItemForm.name.trim(),
           account_subtype: this.expenseItemForm.account_subtype
-        };
-
-        await api.post("/accounts/expense-items", payload);
-        alert(`✅ Expense Item "${this.expenseItemForm.name}" created successfully!`);
-
+        });
+        alert(`✅ Expense Item "${this.expenseItemForm.name}" created!`);
         await this.fetchExpenseAccounts();
         this.closeItemModal();
       } catch (err) {
-        console.error("❌ Error creating expense item:", err);
-        alert("Failed to create expense item. " + (err.response?.data?.error || err.message));
+        console.error("Error creating expense item:", err);
+        alert("Failed to create expense item.");
       }
     },
 
@@ -551,23 +591,26 @@ export default {
         };
 
         const cleanParams = Object.fromEntries(
-          Object.entries(params).filter(([_, value]) => value !== undefined)
+          Object.entries(params).filter(([, v]) => v !== undefined)
         );
 
         const res = await api.get("/expenses/", { params: cleanParams });
 
-        this.expenses = res.data.data || [];
+        this.filteredExpenses = res.data.data || [];
+        this.grandTotal = res.data.grand_total?.total_expenses || 0;
+
+        const p = res.data.pagination || {};
         this.pagination = {
-          total: res.data.pagination.total || 0,
-          pages: res.data.pagination.pages || 1,
-          current_page: res.data.pagination.current_page || 1,
-          per_page: res.data.pagination.per_page || this.perPage,
-          has_next: res.data.pagination.has_next || false,
-          has_prev: res.data.pagination.has_prev || false,
+          total: p.total_records || 0,
+          pages: p.total_pages || 1,
+          current_page: p.current_page || 1,
+          per_page: p.per_page || this.perPage,
+          has_next: p.has_next || false,
+          has_prev: p.has_prev || false,
         };
       } catch (err) {
-        console.error("❌ Error fetching expenses:", err);
-        alert("Failed to load expenses. Please try again.");
+        console.error("Error fetching expenses:", err);
+        alert("Failed to load expenses.");
       }
     },
 
@@ -582,7 +625,7 @@ export default {
         alert("Start date cannot be later than end date.");
         return;
       }
-      this.pagination.current_page = 1; // Reset to first page on filter
+      this.pagination.current_page = 1;
       this.fetchExpenses();
     },
 
@@ -591,7 +634,6 @@ export default {
       const today = new Date().toISOString().split("T")[0];
       const oneMonthAgo = new Date();
       oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-
       this.dateRange = {
         start: oneMonthAgo.toISOString().split("T")[0],
         end: today,
@@ -602,20 +644,19 @@ export default {
 
     async deleteExpense(id) {
       if (!confirm("Are you sure you want to delete this expense?")) return;
-
       try {
         await api.delete(`/expenses/${id}`);
         alert("🗑️ Expense deleted successfully!");
         this.fetchExpenses();
       } catch (err) {
-        console.error("❌ Error deleting expense:", err);
+        console.error("Error deleting expense:", err);
         alert("Failed to delete expense.");
       }
     },
 
     toggleExpand(id) {
       if (this.expandedRows.includes(id)) {
-        this.expandedRows = this.expandedRows.filter(rowId => rowId !== id);
+        this.expandedRows = this.expandedRows.filter(r => r !== id);
       } else {
         this.expandedRows.push(id);
       }
@@ -623,34 +664,105 @@ export default {
 
     exportExcel() {
       try {
-        const ws = XLSX.utils.json_to_sheet(this.expenses);
+        const rows = [];
+
+        this.filteredExpenses.forEach(exp => {
+          exp.items.forEach(item => {
+            rows.push({
+              "Exp ID": exp.id,
+              "Date": exp.expense_date,
+              "Description": exp.description,
+              "Reference": exp.reference || "—",
+              "Trans #": exp.transaction_no || "—",
+              "Item Name": item.item_name || "—",
+              "Narration": item.description || "—",
+              "Account": this.getAccountName(item.account_id),
+              "Amount (UGX)": Number(item.amount || 0),
+            });
+          });
+        });
+
+        rows.push({
+          "Exp ID": "GRAND TOTAL",
+          "Date": "",
+          "Description": "",
+          "Reference": "",
+          "Trans #": "",
+          "Item Name": "",
+          "Narration": "",
+          "Account": "",
+          "Amount (UGX)": this.grandTotal,
+        });
+
+        const ws = XLSX.utils.json_to_sheet(rows);
+        ws["!cols"] = [
+          { wch: 10 }, { wch: 12 }, { wch: 35 }, { wch: 15 },
+          { wch: 12 }, { wch: 28 }, { wch: 45 }, { wch: 30 }, { wch: 16 }
+        ];
+
         const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Expenses");
-        XLSX.writeFile(wb, "expenses.xlsx");
+        XLSX.utils.book_append_sheet(wb, ws, "Expense Details");
+        XLSX.writeFile(wb, `expenses_${new Date().toISOString().slice(0,10)}.xlsx`);
       } catch (err) {
-        console.error("❌ Error exporting Excel:", err);
-        alert("Failed to export Excel.");
+        console.error("Excel export failed:", err);
+        alert("Failed to export to Excel.");
       }
     },
 
     exportPDF() {
       try {
         const doc = new jsPDF();
-        doc.autoTable({
-          head: [["ID", "Description", "Total Amount", "Reference", "Expense Date", "Transaction No"]],
-          body: this.expenses.map(e => [
-            e.id,
-            e.description,
-            e.total_amount,
-            e.reference,
-            e.expense_date,
-            e.transaction_no
+
+        doc.setFontSize(16);
+        doc.text("Expense Report – Itemized Breakdown", 14, 18);
+
+        doc.setFontSize(11);
+        doc.text(`Period: ${this.dateRange.start} to ${this.dateRange.end}`, 14, 26);
+        doc.text(`Generated: ${new Date().toLocaleDateString()}`, 14, 32);
+
+        const body = this.filteredExpenses.flatMap(exp =>
+          exp.items.map(item => [
+            exp.id,
+            exp.expense_date,
+            exp.description.length > 55 ? exp.description.substring(0, 52) + "..." : exp.description,
+            exp.reference || "—",
+            item.item_name,
+            item.description?.length > 65 ? item.description.substring(0, 62) + "..." : (item.description || "—"),
+            this.getAccountName(item.account_id),
+            Number(item.amount).toLocaleString("en-US"),
           ])
+        );
+
+        doc.autoTable({
+          head: [["ID", "Date", "Description", "Ref", "Item", "Narration", "Account", "Amount (UGX)"]],
+          body,
+          startY: 38,
+          styles: { fontSize: 8, cellPadding: 3 },
+          headStyles: { fillColor: [79, 70, 229], textColor: 255 },
+          alternateRowStyles: { fillColor: [245, 247, 250] },
+          columnStyles: {
+            0: { cellWidth: 14 },
+            1: { cellWidth: 22 },
+            2: { cellWidth: 38 },
+            3: { cellWidth: 16 },
+            4: { cellWidth: 28 },
+            5: { cellWidth: 45 },
+            6: { cellWidth: 30 },
+            7: { cellWidth: 24, halign: "right" },
+          },
+          margin: { top: 38, left: 14, right: 14 },
         });
-        doc.save("expenses.pdf");
+
+        const finalY = doc.lastAutoTable.finalY + 10;
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "bold");
+        doc.text("Grand Total:", 140, finalY);
+        doc.text(this.formatCurrency(this.grandTotal), 190, finalY, { align: "right" });
+
+        doc.save(`expenses_detailed_${new Date().toISOString().slice(0,10)}.pdf`);
       } catch (err) {
-        console.error("❌ Error exporting PDF:", err);
-        alert("Failed to export PDF.");
+        console.error("PDF export failed:", err);
+        alert("Failed to export to PDF.");
       }
     },
   },
@@ -667,7 +779,7 @@ export default {
     this.fetchCashBankAccounts();
     this.fetchExpenseAccounts();
     this.fetchExpenseSubtypes();
-  }
+  },
 };
 </script>
 
@@ -684,9 +796,7 @@ export default {
 }
 .animate-scaleUp { animation: scaleUp 0.3s ease-out forwards; }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+.group:hover .group-hover\:block {
+  display: block;
 }
-.animate-fadeIn { animation: fadeIn 0.5s ease-in-out forwards; }
 </style>

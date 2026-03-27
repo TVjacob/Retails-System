@@ -184,6 +184,7 @@ def create_sale():
 
         # Record payment if any
         if amount_paid > 0:
+
             payment = Payment(
                 sale_id=sale.id,
                 amount=amount_paid,
@@ -809,8 +810,8 @@ def create_or_update_sale_old():
 
 
 @token_required
-@sales_bp.route('/edit', methods=['POST'])
-def create_or_update_sale():
+@sales_bp.route('/edit_1', methods=['POST'])
+def create_or_update_sale_old_1():
     data = request.json
 
     try:
@@ -900,11 +901,17 @@ def create_or_update_sale():
             db.session.flush()  # get sale.id
 
         # === COMMON: Process new items (create or re-create) ===
+        # IMPORTANT: reset accumulators
+        total_amount = 0.0
+        cogs_total = 0.0
         for idx, item_data in enumerate(items, start=1):
             product_id = item_data.get("product_id")
             unit_id = item_data.get("unit_id")
             quantity = float(item_data.get("quantity", 0))
             unit_price = float(item_data.get("unit_price", 0))
+            total_amount+= unit_price * quantity
+
+
 
             if not product_id or not unit_id:
                 return jsonify({"error": f"Product ID and Unit ID required for item #{idx}"}), 400
@@ -956,10 +963,11 @@ def create_or_update_sale():
             )
             db.session.add(inv_txn)
 
-            total_amount += sale_item.total_price
+            # total_amount += sale_item.total_price
             cogs_total += cogs_amount
 
         # Update sale totals
+        print(f"Total amount calculated: {total_amount}, COGS total: {cogs_total}")
         sale.total_amount = total_amount
         sale.balance = total_amount - amount_paid
 
@@ -1031,3 +1039,233 @@ def create_or_update_sale():
         db.session.rollback()
         current_app.logger.error(f"Sale {'update' if sale_id else 'create'} failed: {str(e)}", exc_info=True)
         return jsonify({"error": "Failed to process sale"}), 500
+    
+
+
+
+
+
+
+@token_required
+@sales_bp.route('/edit', methods=['POST'])
+def create_or_update_sale():
+    data = request.json
+
+    try:
+        sale_id = data.get("sale_id")
+        items = data.get('items', [])
+        amount_paid = float(data.get('amount_paid', 0))
+        payment_account_id = data.get('payment_account_id')
+        sale_date_str = data.get("sale_date")
+        payment_type = data.get('payment_type', 'Cash')
+        memo = data.get("memo", "")
+        customer_id = data.get("customer_id", 1)
+
+        if not items:
+            return jsonify({"error": "At least one item is required"}), 400
+
+        try:
+            sale_date = datetime.strptime(sale_date_str, "%Y-%m-%d").date() if sale_date_str else datetime.utcnow().date()
+        except ValueError:
+            return jsonify({"error": "Invalid date format. Use YYYY-MM-DD"}), 400
+
+        if amount_paid > 0 and not payment_account_id:
+            return jsonify({"error": "Payment account required when amount_paid > 0"}), 400
+
+        total_amount = 0.0
+        cogs_total = 0.0
+
+        if sale_id:
+            sale = Sale.query.get_or_404(sale_id)
+
+            # 1. Reverse old data (stock, items, transactions, payments)
+            old_items = SaleItem.query.filter_by(sale_id=sale.id, status=1).all()
+            for old_item in old_items:
+                product = Product.query.get(old_item.product_id)
+                if product:
+                    unit = ProductUnit.query.get(old_item.unit_id)
+                    conv = unit.conversion_quantity if unit else 1
+                    restored_qty = old_item.quantity * conv
+                    product.quantity = float(product.quantity or 0) + restored_qty
+                    db.session.add(product)
+
+                old_item.status = 9
+                db.session.add(old_item)
+
+            InventoryTransaction.query.filter_by(sale_id=sale.id, status=1).update({"status": 9})
+            Payment.query.filter_by(sale_id=sale.id, status=1).update({"status": 9})
+
+            # Reset totals BEFORE processing new items
+            sale.total_amount = 0.0
+            sale.total_paid = 0.0          # will be set to amount_paid later
+            sale.balance = 0.0
+            sale.updated_at = datetime.utcnow()
+
+            # Update header fields
+            sale.customer_id = customer_id
+            sale.sale_date = sale_date
+            sale.memo = memo
+
+            txn_id = sale.transaction_no
+            txn_str = sale.sale_number
+
+            current_app.logger.info(f"Updating existing sale #{sale_id} - {txn_str}")
+
+        else:
+            txn_id, txn_str = generate_transaction_number_partone('INV', transaction_date=sale_date)
+
+            sale = Sale(
+                sale_number=txn_str,
+                customer_id=customer_id,
+                total_amount=0.0,           # start clean
+                total_paid=0.0,
+                balance=0.0,
+                sale_date=sale_date,
+                memo=memo,
+                status=1,
+                transaction_no=txn_id
+            )
+            db.session.add(sale)
+            db.session.flush()
+
+        # IMPORTANT: reset accumulators
+        total_amount = 0.0
+        cogs_total = 0.0
+
+        # Process items
+        for idx, item_data in enumerate(items, start=1):
+            product_id = item_data.get("product_id")
+            unit_id = item_data.get("unit_id")
+            quantity = float(item_data.get("quantity", 0))
+            unit_price = float(item_data.get("unit_price", 0))
+            total_price = float(item_data.get("total_price", unit_price * quantity))
+            total_amount+= total_price
+
+            if not product_id or not unit_id:
+                return jsonify({"error": f"Product ID and Unit ID required for item #{idx}"}), 400
+
+            product = Product.query.get_or_404(product_id)
+
+            unit = ProductUnit.query.filter_by(id=unit_id, product_id=product_id, status=1).first()
+            if not unit:
+                return jsonify({"error": f"Invalid or inactive unit for product {product.name}"}), 400
+
+            base_qty_required = quantity * unit.conversion_quantity
+
+            if product.quantity < base_qty_required:
+                return jsonify({"error": f"Insufficient stock for {product.name} ({unit.unit_name}). "
+                                        f"Available: {product.quantity}, Required: {base_qty_required}"}), 400
+
+            product.quantity -= base_qty_required
+            db.session.add(product)
+
+            latest_cost = get_latest_cost_price(product.id)
+            cogs_amount = latest_cost * base_qty_required
+
+            sale_item = SaleItem(
+                sale_id=sale.id,
+                product_id=product.id,
+                unit_id=unit.id,
+                product_name=product.name,
+                quantity=quantity,
+                unit_price=unit_price,
+                total_price=quantity * unit_price,
+                status=1
+            )
+            db.session.add(sale_item)
+
+            inv_txn = InventoryTransaction(
+                transaction_no=txn_id,
+                sale_id=sale.id,
+                product_id=product.id,
+                unit_id=unit.id,
+                quantity=base_qty_required,
+                unit_price=latest_cost,
+                total_price=total_price,
+                transaction_type='Sale',
+                status=1
+            )
+            db.session.add(inv_txn)
+
+            # total_amount += sale_item.total_price
+            cogs_total += cogs_amount
+
+        # Final update
+        sale.total_amount = total_amount
+        sale.total_paid = amount_paid
+        sale.balance = total_amount - amount_paid
+
+        print(f"Total amount: {total_amount},   here sale.total amount  {sale.total_amount}, Amount paid: {amount_paid}, Balance: {sale.balance}, COGS total: {cogs_total}")
+
+        if amount_paid >= total_amount:
+            sale.status = 1
+        elif amount_paid > 0:
+            sale.status = 4
+        else:
+            sale.status = 3
+
+        if hasattr(sale, 'update_totals'):
+            sale.update_totals()
+
+        # GL entries
+        entries = [
+            {"account_id": 4000, "transaction_type": "Credit", "amount": total_amount},
+            {"account_id": 5000, "transaction_type": "Debit", "amount": cogs_total},
+            {"account_id": 1200, "transaction_type": "Credit", "amount": cogs_total},
+        ]
+
+        if amount_paid > 0:
+            payment_account = Account.query.get(payment_account_id)
+            if not payment_account:
+                raise ValueError("Invalid payment account")
+
+            entries.append({"account_id": payment_account.code, "transaction_type": "Debit", "amount": amount_paid})
+
+            if sale.balance > 0:
+                entries.append({"account_id": 1100, "transaction_type": "Debit", "amount": sale.balance})
+        else:
+            entries.append({"account_id": 1100, "transaction_type": "Debit", "amount": total_amount})
+
+        post_to_ledger(
+            entries,
+            transaction_no_id=txn_id,
+            description=f"Sale Invoice #{txn_str} - {'Update' if sale_id else 'Create'}",
+            transaction_date=sale_date
+        )
+
+        if amount_paid > 0:
+            new_payment = Payment(
+                sale_id=sale.id,
+                amount=amount_paid,
+                payment_type=payment_type,
+                payment_date=sale_date,
+                reference=memo or txn_str,
+                payment_account_id=payment_account_id,
+                transaction_no=txn_id,
+                status=1
+            )
+            db.session.add(new_payment)
+
+        db.session.commit()
+
+        print(f" Part two Total amount: {total_amount},   here sale.total amount  {sale.total_amount}, Amount paid: {amount_paid}, Balance: {sale.balance}, COGS total: {cogs_total}")
+
+
+        return jsonify({
+            "message": f"Sale {'updated' if sale_id else 'created'} successfully",
+            "sale_id": sale.id,
+            "sale_number": sale.sale_number,
+            "total_amount": sale.total_amount,
+            "amount_paid": sale.total_paid,
+            "balance": sale.balance,
+            "sale_date": sale.sale_date.strftime("%Y-%m-%d")
+        }), 200 if sale_id else 201
+
+    except ValueError as ve:
+        db.session.rollback()
+        current_app.logger.error(f"ValueError in sale {'update' if sale_id else 'create'}: {str(ve)}", exc_info=True)
+        return jsonify({"error": str(ve)}), 400
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(f"Sale {'update' if sale_id else 'create'} failed: {str(e)}", exc_info=True)
+        return jsonify({"error": "Failed to process sale - check logs"}), 500
