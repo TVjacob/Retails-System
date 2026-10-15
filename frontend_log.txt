@@ -1602,3 +1602,1459 @@
 
 [2m1:41:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.vue, /src/pages/Sales.vue, /src/pages/Products.vue, /src/pages/Supplier.vue, /src/pages/Purchases.vue, /src/pages/Expenses.vue, /src/pages/Customer.vue, /src/pages/User.vue, /src/pages/SalesList.vue, /src/pages/PurchaseList.vue, /src/pages/reports/Outofstock.vue, /src/pages/reports/Stocklist.vue, /src/pages/reports/ExpenseReport.vue, /src/pages/reports/PurchaseReport.vue, /src/pages/reports/Performance.vue, /src/pages/reports/ConsumptionList.vue, /src/pages/reports/CreditorList.vue, /src/pages/reports/DebtorList.vue, /src/pages/reports/Cashflow.vue, /src/pages/reports/Profitandloss.vue, /src/pages/reports/Trialbalance.vue, /src/pages/reports/Generalledger.vue, /src/pages/Login.vue, /src/pages/PurchaseOrderEdit.vue, /src/pages/reports/ExpenseDetailsReport.vue, /src/pages/reports/PurchaseDetails.vue, /src/pages/reports/Acoa.vue, /src/pages/UserProfile.vue, /src/pages/Accounts.vue, /src/pages/reports/BalanceSheet.vue, /src/pages/reports/SalesProfit.vue, /src/pages/reports/PurchaseProduct.vue, /src/components/Sidebar.vue, /src/components/Navbar.vue, /src/pages/PaymentModal.vue, /src/pages/PaymentPurchaseModal.vue, /src/main.css[22m
 [2m1:41:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Login.vue, /src/main.css[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1593[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+[2m6:23:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sidebar.vue, /src/main.css[22m
+^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1634[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13243[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1430[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^CTerminate batch job (Y/N)? 
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1379[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1387[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1745[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m11186[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1444[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2057[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3299[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1507[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2628[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1522[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1394[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2053[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1715[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15748[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1548[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1372[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1491[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m14818[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m11552[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1454[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13166[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1362[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m14589[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1517[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m20295[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1650[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m8380[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1618[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m19180[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m17998[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15489[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15330[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m17366[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m16095[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15328[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13154[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15617[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m14380[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m32525[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13276[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2276[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m12146[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1383[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1437[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13862[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1761[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1907[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m18610[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m14371[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m20214[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2242[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m19273[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1821[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m20092[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1851[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m11479[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2014[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m33426[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m19347[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2258[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2194[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2534[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m43200[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m6662[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m13055[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1810[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m17542[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2269[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m17303[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2338[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m23702[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m3487[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m12653[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m18512[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m23955[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2754[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m15916[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m7720[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2477[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m1995[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2127[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2327[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m16850[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2614[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2670[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2270[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2318[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+^C
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m9390[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
+
+> sjhardware-frontend@0.0.0 dev
+> vite --port 5173
+
+
+  [32m[1mVITE[22m v7.1.5[39m  [2mready in [0m[1m2238[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[1m[33m[@vue/compiler-sfc][0m[33m `defineProps` is a compiler macro and no longer needs to be imported.[0m
+
